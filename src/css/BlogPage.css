@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+
+
+body
+{
+  font-family: Lekton;
+  font-weight: 700;
+}
+
+.blog-page {
+  background: linear-gradient(180deg, #0d1a2f 0%, #1a2a44 50%, #2b3e5a 100%);
+  color: #d7dedf;
+  min-height: 310vh;
+  font-family: Lekton;
+  font-weight: 700;
+  display: flex; /* grid yerine flex */
+  flex-direction: column; /* dikey akış */
+  align-items: center;
+}
+
+.blog-header {
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.4rem;
+  margin-top: 6rem;
+  font-weight: 800;
+  color: #e0f0ff;
+  text-shadow: 0 0 10px rgba(147, 185, 225, 0.35);
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: 1fr; /* mobilde tek sütun */
+  gap: 8rem;
+  width: 100%;
+  max-width: 1200px;
+  scroll-behavior: smooth;
+}
+
+.blog-image {
+  width: 100%;
+  height: 18rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card {
+  font-family: Lekton;
+  font-weight: 700;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
+}
+
+.blog-post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #93b9e1;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d7dedf;
+  flex-grow: 1; /* kartta alan doldursun */
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto; /* meta kısmı kartın altına yapışır */
+}
+
+.blog-avatar {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #93b9e1;
+}
+
+.blog-author > a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #93b9e1;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.footer-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 768px ve üstü ekranlarda iki sütun */
+@media (min-width: 768px) {
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}

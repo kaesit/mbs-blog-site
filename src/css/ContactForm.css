@@ -1,0 +1,56 @@
+/* Genel sayfa ayarları */
+.contact-page {
+  background: linear-gradient(180deg, #0d1a2f 0%, #0b1525 50%, #06162d 100%);
+  color: #d7dedf;
+  align-items: center;
+  height: 150vh;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Başlık */
+.contact-page-header {
+  position: relative;
+  text-align: center;
+  top: 16vh;
+}
+
+.contact-page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Spotlight kartlar */
+.contact-form {
+  display: flex;
+  width: 100%;
+  margin-top: 8rem;
+  justify-content: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.contact-content {
+  display: flex;
+  height: 700px;
+  width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.55rem;
+  color: #aaa;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

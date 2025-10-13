@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: Lekton;
+  font-weight: 700;
+}
+pre {
+  white-space: pre-wrap; /* wrap instead of scroll */
+  word-wrap: break-word; /* break long words if needed */
+}
+
+.titleOfMainPage {
+  color: #e0f0ff; /* soft beyaz */
+  font-family: "VVDS Fifties Exp SBold Italic";
+  text-shadow: 0 0 15px rgba(175, 210, 255, 0.25); /* Spotlight ile uyumlu daha belirgin bir ışık */
+  font-weight: 300;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1.75rem;
+}

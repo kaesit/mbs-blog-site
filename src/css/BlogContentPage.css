@@ -1,0 +1,64 @@
+.blog-content-page {
+  background:linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
+  color: #d7dedf;
+  min-height: 100vh;
+  font-family: "VVDS Fifties Exp SBold Italic";
+  font-weight: 800;
+  display: flex; /* grid yerine flex */
+  flex-direction: column; /* dikey akış */
+  align-items: center;
+}
+
+.blog-content-header {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+
+.blog-author-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.author-name > a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-weight: 900;
+  color: #58f0b5;
+}
+
+.blog-date {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.blog-main-spotlight {
+  margin-top: 4rem;
+  max-width: 1000px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.blog-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-main-spotlight {
+    padding: 1rem;
+  }
+}

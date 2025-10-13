@@ -1,0 +1,59 @@
+.text-rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  font-size: 2.9rem;
+  height: 80px;
+  font-family: "VVDS Fifties Exp SBold Italic";
+  font-weight: 900;
+  bottom: -1px;
+  text-shadow: 0 0 15px rgba(175, 210, 255, 0.25); /* Spotlight ile uyumlu daha belirgin bir ışık */
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #e0f0ff;
+  overflow: hidden;
+  letter-spacing: 0rem;
+  z-index: 9999;
+  min-height: 2.5rem;
+  padding: 0; /* container padding kaldırıldı */
+}
+
+.text-rotate-element {
+  display: inline-block;
+  padding: 0.2rem 0.1rem; /* padding artık iç elementlerde */
+}
+.text-rotate-sr-only {
+  position: absolute;
+  width: 1px;
+  z-index: 9999;
+  color: white;
+  width: 120px;
+  height: 60px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-rotate-word {
+  display: inline-flex;
+}
+
+.text-rotate-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ortala */
+}
+
+.text-rotate-element {
+  display: inline-block;
+}
+
+.text-rotate-space {
+  white-space: pre;
+}
