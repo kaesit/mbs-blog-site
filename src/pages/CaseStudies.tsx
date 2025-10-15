@@ -95,25 +95,25 @@ const CaseStudies: React.FC = () => {
   }, []);
 
   return (
-    <div className="blog-page">
-      <header className="blog-header">
-        <h1 className="blog-title">Case Studies 0 </h1>
+    <div className="case-blog-page">
+      <header className="case-blog-header">
+        <h1 className="case-blog-title">Case Studies 0 </h1>
       </header>
 
-      <div className="blog-list">
+      <div className="case-blog-list">
         {loading
           ? [1, 2, 3].map((s) => (
               <SpotlightCard
                 key={s}
-                className="blog-card"
+                className="case-blog-card"
                 spotlightColor="rgba(60, 36, 147, 0.25)"
                 position={{ x: 12, y: 12 }}
               >
-                <div className="blog-skeleton">
+                <div className="case-blog-skeleton">
                   <Skeleton variant="text" width="80%" height={36} />
                   <Skeleton variant="text" width="95%" height={24} />
                   <Skeleton variant="text" width="90%" height={24} />
-                  <div className="blog-meta">
+                  <div className="case-blog-meta">
                     <Skeleton variant="circular" width={40} height={40} />
                     <Skeleton variant="text" width="40%" height={20} />
                   </div>
@@ -123,21 +123,21 @@ const CaseStudies: React.FC = () => {
           : posts.map((post) => (
               <SpotlightCard
                 key={post.id}
-                className="blog-card"
+                className="case-blog-card"
                 spotlightColor="rgba(60, 36, 147, 0.25)"
                 position={{ x: 12, y: 12 }}
               >
-                <div className="blog-content">
-                  <img className="blog-image" src={post.img} alt="" />
-                  <h2 className="blog-post-title">{post.title}</h2>
-                  <p className="blog-excerpt">{post.excerpt}</p>
-                  <div className="blog-meta">
+                <div className="case-blog-content">
+                  <img className="case-blog-image" src={post.img} alt="" />
+                  <h2 className="case-blog-post-title">{post.title}</h2>
+                  <p className="case-blog-excerpt">{post.excerpt}</p>
+                  <div className="case-blog-meta">
                     <BlogAvatar alt="Author" src={post.author_image} />
                     <div>
-                      <Typography className="blog-author">
+                      <Typography className="case-blog-author">
                         <a href="/about">{post.author}</a>
                       </Typography>
-                      <Typography className="blog-date">{post.date}</Typography>
+                      <Typography className="case-blog-date">{post.date}</Typography>
                     </div>
                   </div>
                 </div>

@@ -175,7 +175,7 @@ const BlogPage: React.FC = () => {
                       <Typography className="blog-author">
                         <a href="/about">{post.author}</a>
                       </Typography>
-                      <Typography className="blog-date">{post.date}</Typography>
+                      <Typography><p className="blog-date">{post.date}</p></Typography>
                     </div>
                   </div>
                 </div>
