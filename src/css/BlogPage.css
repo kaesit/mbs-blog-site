@@ -6,10 +6,9 @@ body {
 }
 
 .blog-page {
-  background: linear-gradient(180deg, #0d1a2f 0%, #1a2a44 50%, #2b3e5a 100%);
+  background:linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
   color: #d7dedf;
   min-height: 310vh;
-  font-family: Lekton;
   font-weight: 700;
   align-items: center;
 }
@@ -19,21 +18,21 @@ body {
 }
 
 .blog-title {
-  font-size: 2.4rem;
-  margin-top: 6rem;
-  font-weight: 800;
+  font-size: 12rem;
+  font-weight: 100;
+  font-family: "VVDS Fifties Exp SBold Italic";
   color: #e0f0ff;
   text-shadow: 0 0 10px rgba(147, 185, 225, 0.35);
 }
 
 .blog-list {
-  display: grid;
-  grid-template-columns: 1fr; /* mobile: 1 column */
-  gap: 2rem;
-  width: 50%;
-  max-width: 65vw;
-  scroll-behavior: smooth;
-  justify-content: center;
+  display: flex;
+  gap: 8rem;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items:flex-start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .blog-image {
@@ -48,10 +47,9 @@ body {
   font-weight: 700;
   border-radius: 1.2rem;
   display: flex;
-  width: 50%;
   flex-direction: column;
-  max-height: 500px;
-  height: 50%;
+  height: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .blog-skeleton {
@@ -95,6 +93,7 @@ body {
 
 .blog-author > a {
   text-decoration: none;
+  font-family:VVDS Fifties Exp SBold;
   font-size: 1rem;
   font-weight: 900;
   color: #93b9e1;
@@ -113,34 +112,34 @@ body {
   padding: 0;
 }
 
-/* 768px ve üstü ekranlarda iki sütun */
-@media (min-width: 768px) {
-  .blog-list {
-    grid-template-columns: 1fr 1fr;
-    width: 65%;
-    max-width: 95vw;
+@media (max-width: 1200px) {
+  .blog-card {
+    width: 30%;
+    max-width: 32vw;
   }
 }
 
-/* 1200px ve üstü ekranlarda dört sütun */
-@media (min-width: 1200px) {
-  .blog-list {
-    grid-template-columns: repeat(4, 1fr);
-    width: 65%;
-    max-width: 1200px;
+@media (max-width: 900px) {
+  .blog-card {
+    width: 45%;
+    max-width: 48vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card {
+    width: 90%;
+    max-width: 95vw;
   }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
   .blog-list {
-    grid-template-columns: 1fr 1fr;
-    max-width: 95vw;
-    justify-items: center;
-    width: 65%;
+    justify-content: center;
+    gap: 8rem;
   }
   .blog-card {
-    display: flex;
-    max-width: 65vw;
     width: 90%;
+    max-width: 65vw;
   }
 }

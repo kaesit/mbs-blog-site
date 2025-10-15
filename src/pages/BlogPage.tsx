@@ -132,7 +132,7 @@ const BlogPage: React.FC = () => {
   return (
     <div className="blog-page">
       <header className="blog-header">
-        <h1 className="blog-title">Blog</h1>
+        <h1 ><p className="blog-title">Blog</p></h1>
       </header>
 
       <div className="blog-list">
@@ -142,6 +142,7 @@ const BlogPage: React.FC = () => {
                 key={s}
                 className="blog-card"
                 spotlightColor="rgba(60, 36, 147, 0.25)"
+
               >
                 <div className="blog-skeleton">
                   <Skeleton variant="text" width="30%" height={36} />

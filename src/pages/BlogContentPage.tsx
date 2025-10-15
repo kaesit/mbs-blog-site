@@ -28,7 +28,7 @@ import image10 from "../img/image10.png";
 const BlogTitle = styled(Typography)({
   fontFamily: "VVDS Fifties Exp SBold Italic",
   fontWeight: 800,
-  fontSize: "3.5rem",
+  fontSize: "3.9rem",
   color: "#58f0b5",
   marginBottom: "1.3rem",
 });
