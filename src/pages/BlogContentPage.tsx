@@ -22,12 +22,14 @@ import image9 from "../img/image9.jpg";
 import image10 from "../img/image10.png";
 
 // Custom MUI Components
-{/*color: "#58A6F0",*/}
+{
+  /*color: "#58A6F0",*/
+}
 const BlogTitle = styled(Typography)({
   fontFamily: "VVDS Fifties Exp SBold Italic",
   fontWeight: 800,
   fontSize: "3.5rem",
-  color:"#58f0b5",
+  color: "#58f0b5",
   marginBottom: "1.3rem",
 });
 
@@ -47,7 +49,7 @@ const BlogAvatar = styled(Avatar)({
 });
 
 const SectionTitle = styled(Typography)({
-  fontFamily:"Lekton",
+  fontFamily: "Lekton",
   fontWeight: 700,
   fontSize: "1.5rem",
   color: "#58f0b5",
@@ -185,6 +187,44 @@ const BlogContentPage: React.FC = () => {
           </Masonry>
 
           <ActionButton>Read More</ActionButton>
+        </div>
+      </SpotlightCard>
+
+      <SpotlightCard
+        className="blog-more-section-spotlight"
+        spotlightColor="rgba(60, 36, 147, 0.15)"
+        position={{ x: 10, y: 10 }}
+      >
+        <div className="blog-content-text">
+          {/*<div className="little-news-cards">
+            <img src={image10} alt="" />
+          </div>
+          <div className="little-news-cards">
+            <img src={image10} alt="" />
+          </div>
+          <div className="little-news-cards">
+            <img src={image10} alt="" />
+          </div>
+          <div className="little-news-cards">
+            <img src={image10} alt="" />
+          </div>
+          <div className="little-news-cards">
+            <img src={image10} alt="" />
+          </div>*/}
+          <SectionTitle>References</SectionTitle>
+          <BlogText>
+            Here are some essential resources to learn more about liberated
+            software:
+            <br />
+            1. **MDN Web Docs** – Comprehensive documentation on web
+            technologies and development practices.
+            <br />
+            2. **Material UI Documentation** – Official guide to building modern
+            web applications with Material UI.
+            <br />
+            3. **CSS-Tricks Tutorials** – Learn practical CSS and design
+            techniques that are widely used in modern web development.
+          </BlogText>
         </div>
       </SpotlightCard>
 
