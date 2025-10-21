@@ -18,7 +18,7 @@ const About: React.FC = () => {
       {/* Spotlight Kartlar */}
       <div className="about-cards">
         <SpotlightCard
-          className="custom-spotlight-card"
+          className="about-spotlight-card"
           spotlightColor="rgba(60, 36, 147, 0.25)"
           position={{ x: 12, y: 12 }}
         >
@@ -33,7 +33,7 @@ const About: React.FC = () => {
         </SpotlightCard>
 
         <SpotlightCard
-          className="custom-spotlight-card"
+          className="about-spotlight-card"
           spotlightColor="rgba(60, 36, 147, 0.25)"
           position={{ x: 32, y: 32 }}
         >
@@ -52,7 +52,7 @@ const About: React.FC = () => {
         </SpotlightCard>
 
         <SpotlightCard
-          className="custom-spotlight-card"
+          className="about-spotlight-card"
           spotlightColor="rgba(60, 36, 147, 0.25)"
           position={{ x: 24, y: 24 }}
         >
