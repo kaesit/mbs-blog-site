@@ -1,6 +1,6 @@
 /* Genel sayfa ayarları */
 .about-page {
-  background:linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
+  background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
   color: #d7dedf;
   align-items: center;
   font-family: "VVDS Fifties Exp SBold Italic";
@@ -42,7 +42,7 @@
 
 .custom-spotlight-card {
   border-radius: 12px;
-  background-color: #58f0b5;
+  /*background-color: #58f0b5;*/
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

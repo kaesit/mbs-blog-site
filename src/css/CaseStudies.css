@@ -3,9 +3,9 @@
 
 .case-blog-page {
   /* Daha modern ve kontrastlı bir arka plan gradienti */
-  background: linear-gradient(180deg, #0d1a2f 0%, #0b1525 50%, #06162d 100%);
+  background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
   color: #d7dedf;
-  min-height: 310vh;
+
   font-family: "VVDS Fifties Exp SBold";
   font-weight: 700;
   display: flex;
@@ -26,27 +26,31 @@
 }
 
 .case-blog-list {
-  display: grid;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0.7rem;
   grid-template-columns: 1fr;
   width: 100%;
-  max-width: 1200px;
+  gap: 2.5rem;
+  max-width: 95vw;
   scroll-behavior: smooth;
 }
 
 .case-blog-image {
   width: 100%;
-  height: 18rem;
+  height: 12rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
 .case-blog-card {
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  display: flex;
+  font-family: Lekton;
+  font-weight: 700;
+  border-radius: 1.2rem;
+  max-width: 240px;
   flex-direction: column;
   height: 100%;
-  font-family: Lekton;
   /* Spotlight kartın arka plandan daha belirgin olması için bazı ayarlamalar */
   background: rgba(18, 22, 32, 0.9); /* Arka planın biraz daha koyu olması */
   border: 1px solid rgba(175, 210, 255, 0.25); /* Daha belirgin bir çerçeve */

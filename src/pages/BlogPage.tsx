@@ -14,7 +14,7 @@ import image8 from "../img/image8.jpg";
 import image9 from "../img/image9.jpg";
 import image10 from "../img/image10.png";
 
-
+import { styled } from "@mui/material/styles";
 import { Skeleton, Avatar, Typography } from "@mui/material";
 
 interface BlogPost {
@@ -25,6 +25,14 @@ interface BlogPost {
   author: string;
   date: string;
 }
+
+const BlogAvatar = styled(Avatar)({
+  width: 35,
+  height: 35,
+  border: "1px solid #34dfa5",
+  borderRadius: "0.75rem",
+});
+
 
 const BlogPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -132,7 +140,7 @@ const BlogPage: React.FC = () => {
   return (
     <div className="blog-page">
       <header className="blog-header">
-        <h1 ><p className="blog-title">Blog</p></h1>
+        <h1 ><p className="blog-title">Newest Blogs</p></h1>
       </header>
 
       <div className="blog-list">
@@ -166,11 +174,7 @@ const BlogPage: React.FC = () => {
                   <h2 className="blog-post-title">{post.title}</h2>
                   <p className="blog-excerpt">{post.excerpt}</p>
                   <div className="blog-meta">
-                    <Avatar
-                      alt={post.author}
-                      src={logo}
-                      className="blog-avatar"
-                    />
+                    <BlogAvatar alt="Author" src={image10} />
                     <div>
                       <Typography className="blog-author">
                         <a href="/about">{post.author}</a>
