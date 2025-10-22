@@ -41,7 +41,6 @@
 
 .blog-main-spotlight {
   margin-top: 4rem;
-  background-color: #58f0b5;
   max-width: 85vw;
   width: 100%;
   padding: 2rem;
@@ -52,7 +51,7 @@
   grid-template-columns: 1fr;
   margin-top: 4rem;
   max-width: 85vw;
-  background-color: #58f0b5;
+
   width: 100%;
 }
 .blog-content-text {

@@ -150,7 +150,6 @@ const BlogPage: React.FC = () => {
                 key={s}
                 className="blog-card"
                 spotlightColor="rgba(60, 36, 147, 0.25)"
-
               >
                 <div className="blog-skeleton">
                   <Skeleton variant="text" width="30%" height={36} />

@@ -3,7 +3,7 @@
 .blog-page {
   background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
   color: #d7dedf;
-  font-family: "VVDS Fifties Exp SBold";
+  font-family: "VVDS Fifties Exp SBold Italic", sans-serif;
   font-weight: 700;
   display: flex; /* grid yerine flex */
   flex-direction: column; /* dikey akış */
@@ -15,8 +15,8 @@
 }
 
 .blog-title {
-  font-size: 3.6rem;
-  margin-top: 6rem;
+  font-size: 4.6rem;
+  margin-top: 9rem;
   font-weight: 600;
   color: #e0f0ff;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.45); /* Spotlight ile uyumlu daha belirgin bir ışık */
@@ -29,14 +29,14 @@
   left: 0.7rem;
   grid-template-columns: 1fr; /* mobilde tek sütun */
   width: 100%;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 95vw;
   scroll-behavior: smooth;
 }
 
 .blog-image {
   width: 100%;
-  height: 12rem;
+  height: 14rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
@@ -44,8 +44,8 @@
 .blog-card {
   font-family: Lekton;
   font-weight: 700;
-  border-radius: 1.2rem;
-  max-width: 240px;
+  max-width: 360px;
+  background-color: #1fffc0;
   flex-direction: column;
   height: 100%;
 }

@@ -16,7 +16,7 @@
   color: #e0f0ff;
   overflow: hidden;
   letter-spacing: 0rem;
-  z-index: 9999;
+  z-index: 1;
   min-height: 2.5rem;
   padding: 0; /* container padding kaldırıldı */
 }
