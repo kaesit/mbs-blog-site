@@ -23,6 +23,7 @@ import article_icon from "../icons/article_icon.svg";
 import all_icon from "../icons/all_icon.svg";
 import blog_icon from "../icons/blog_icon.svg";
 import video_icon from "../icons/video_icon.svg";
+import menu_icon from "../icons/menu_icons.svg";
 
 
 
@@ -108,6 +109,9 @@ const ProfilePage: React.FC = () => {
         </div>
         <div>
           <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={article_icon} alt="" />Articles</ActionButton>
+        </div>
+        <div className="more-filter-div">
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={menu_icon} alt="" />More Option</ActionButton>
         </div>
       </div>
       {/* Blog İçerik */}
