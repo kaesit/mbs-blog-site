@@ -18,6 +18,15 @@ import image7 from "../img/image7.jpg";
 import image8 from "../img/image8.jpg";
 import image9 from "../img/image9.jpg";
 
+import project_icon from "../icons/project_icon.svg";
+import article_icon from "../icons/article_icon.svg";
+import all_icon from "../icons/all_icon.svg";
+import blog_icon from "../icons/blog_icon.svg";
+import video_icon from "../icons/video_icon.svg";
+
+
+
+
 
 
 const BlogTitle = styled(Typography)({
@@ -57,16 +66,18 @@ const MediaImage = styled("img")({
 });
 
 const ActionButton = styled(Button)({
-  backgroundColor: "#93b9e1",
+  backgroundColor: "transparent",
   color: "#fff",
   borderRadius: "0.75rem",
   textTransform: "none",
+  border: "1px solid rgba(255, 255, 255, 0.3)",
   fontWeight: 600,
   fontFamily:
     'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
   "&:hover": {
-    backgroundColor: "#7ca6d1",
+    backgroundColor: "#49afee9c",
   },
+
 });
 
 const ProfilePage: React.FC = () => {
@@ -81,6 +92,24 @@ const ProfilePage: React.FC = () => {
         <Typography className="blog-date">Oct 13, 2025</Typography>
       </div>
 
+
+      <div className="filter_section">
+        <div>
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={all_icon} alt="" />All</ActionButton>
+        </div>
+        <div>
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={video_icon} alt="" />Videos</ActionButton>
+        </div>
+        <div>
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={blog_icon} alt="" />Blogs</ActionButton>
+        </div>
+        <div>
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={project_icon} alt="" />Projects</ActionButton>
+        </div>
+        <div>
+          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={article_icon} alt="" />Articles</ActionButton>
+        </div>
+      </div>
       {/* Blog İçerik */}
       <div className="grid_container">
         <GlareHover
