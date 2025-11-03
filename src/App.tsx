@@ -4,8 +4,10 @@ import Footer from "./components/Footer";
 import RotatingText from "./components/RotatingText";
 import SpotlightCard from "./components/SpotlightCard";
 import ai_icon from "./icons/ai_icon.svg";
-import innovation_icon from "./icons/innovation_icon.svg";
+import Aurora from "./components/Aurora";
+import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
+import ai_variation from "./icons/ai-generate-variation-spark.svg";
 
 const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
   <div className="project-tags">
@@ -21,20 +23,27 @@ const App: React.FC = () => {
   return (
     <>
       {/* Background gradient */}
-      <div className="background-gradient" />
+      <div className="background-gradient">
+        <Aurora
+          colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
+          blend={0.9}
+          amplitude={1.0}
+          speed={0.5}
+        />
+      </div>
 
       {/* Hero section */}
       <div className="hero-container">
         <h1 className="titleOfMainPage">
-          <span>Dreams are</span>
+          <span>Mbs is</span>
         </h1>
 
         <RotatingText
           texts={[
-            "Rewriting Reality",
+            "Protecting Reality",
             "Engineering Tomorrow",
-            "Beyond Algorithms",
-            "Dreaming in Binary",
+            "Developing Yourself",
+            "Shaping the Future",
           ]}
           mainClassName="rotating-text"
           staggerFrom={"last"}
@@ -46,13 +55,17 @@ const App: React.FC = () => {
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
           rotationInterval={2400}
         />
+        <div style={{display:"flex", flexDirection:"row", justifyContent:"center", gap:"12px", marginTop:"24px"}}>
+          <button className="join-us-button">Join Us</button>
+          <button className="learn-more-button">Learn More</button>
+        </div>
       </div>
 
       {/* Spotlight cards */}
       <div className="cards-grid">
         <SpotlightCard
           className="custom-spotlight-card"
-          spotlightColor="rgba(60, 36, 147, 0.25)"
+          spotlightColor="rgba(87, 160, 248, 0.75)"
           position={{ x: 12, y: 12 }}
         >
           <span>
@@ -91,7 +104,7 @@ const App: React.FC = () => {
 
         <SpotlightCard
           className="custom-spotlight-card"
-          spotlightColor="rgba(60, 36, 147, 0.25)"
+          spotlightColor="rgba(248, 243, 87, 0.75)"
           position={{ x: 32, y: 32 }}
         >
           <span>
@@ -138,7 +151,7 @@ const App: React.FC = () => {
 
         <SpotlightCard
           className="custom-spotlight-card"
-          spotlightColor="rgba(60, 36, 147, 0.25)"
+          spotlightColor="rgba(248, 87, 146, 0.75)"
           position={{ x: 24, y: 24 }}
         >
           <span>

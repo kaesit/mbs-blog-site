@@ -12,7 +12,6 @@
   position: relative;
   text-align: center;
   top: 13vh;
-  color: #8fb8f5;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25); /* Spotlight ile uyumlu daha belirgin bir ışık */
 
 }
