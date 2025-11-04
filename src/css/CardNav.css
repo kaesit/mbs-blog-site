@@ -179,15 +179,19 @@
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.3s ease;
   display: inline-flex;
   color: ivory;
   align-items: center;
   gap: 6px;
+  border-radius: 3px;
+  transition: 1.2s ease all;
 }
 
 .nav-card-link:hover {
   opacity: 0.9;
+  border: 1px solid rgba(235, 222, 222, 0.65);
+  transition: 1.2s ease all;
+  border-radius: 7px;
   color: #ffffff; /* sitenin accent rengi */
   text-shadow: 0 0 4px rgba(147, 185, 225, 0.6); /* soft glow */
 }
