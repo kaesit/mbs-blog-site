@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import GlareHover from "../components/GlareHover";
-
+import Menu from "@mui/material/Menu";
 import image from "../img/image14.jpg";
 import image2 from "../img/image2.jpg";
 import image3 from "../img/image3.jpg";
@@ -17,6 +17,8 @@ import image6 from "../img/image6.jpg";
 import image7 from "../img/image7.jpg";
 import image8 from "../img/image8.jpg";
 import image9 from "../img/image9.jpg";
+import image10 from "../img/image10.png";
+
 
 import project_icon from "../icons/project_icon.svg";
 import article_icon from "../icons/article_icon.svg";
@@ -30,13 +32,19 @@ import menu_icon from "../icons/menu_icons.svg";
 
 
 
-const BlogTitle = styled(Typography)({
-  fontFamily: "Lekton",
-  fontWeight: 800,
-  fontSize: "2.5rem",
-  color: "#58f0b5",
-  marginBottom: "1.3rem",
-});
+const CustomMenu = styled(Menu)(() => ({
+  "& .MuiPaper-root": {
+    background: "rgba(17, 17, 17, 0.55)",
+    color: "#d7dedf",
+    fontFamily: "Lekton",
+    fontWeight: "700",
+    borderRadius: "0.75rem",
+    border: "1px solid rgba(255, 255, 255, 0.18)",
+    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(147, 185, 225, 0.2)",
+    minWidth: 200,
+    padding: "0.5rem 0",
+  },
+}));
 
 const BlogText = styled(Typography)({
   fontFamily:
@@ -119,6 +127,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -131,6 +141,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -138,12 +150,14 @@ const ProfilePage: React.FC = () => {
           transitionDuration={600}
           playOnce={false}
         >
-          <img style={{ width: "100%", height: "100%" }} src={image2} alt="" />
+          <img style={{ width: "100%", height: "100%" }} src={image10} alt="" />
         </GlareHover>
 
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -156,6 +170,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.3}
           glareAngle={-30}
@@ -168,6 +184,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -180,6 +198,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -192,6 +212,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -204,6 +226,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -216,7 +240,9 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          glareColor="#ff0303ff"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
+          glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
           glareSize={400}
@@ -228,6 +254,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
+          borderColor="#3f6cf4"
+          borderRadius="25px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
