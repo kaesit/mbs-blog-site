@@ -1,6 +1,6 @@
 /* Genel sayfa ayarları */
 .about-page {
-  background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
+  background:linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
   align-items: center;
   font-family: "VVDS Fifties Exp SBold Italic";
@@ -16,23 +16,47 @@
 
 }
 
+h3{
+  font-family: "VVDS Fifties Exp SBold Italic";
+}
+
+p{
+  font-family: sourcecodepro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 900;
+}
+
 .about-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
-  margin: 0;
+  margin-top: 40px;
+}
+
+.about-spotlight-card
+{
+  background-color: red;
+  display: flex;
+  justify-content: center;
 }
 
 .about-subtitle {
   font-size: 1.5rem;
-  color: #d2cbcb;
+  color: #f3ebeb;
   margin-top: 0.5rem;
+}
+
+.about-hero-containers {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 0 2rem;
 }
 
 /* Spotlight kartlar */
 .about-cards {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 100%;
+  flex-direction: column;
   margin-top: 8rem;
   gap: 2rem;
   justify-content: center;
@@ -56,6 +80,6 @@
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
+  width: 15px;
+  height: 15px;
 }
