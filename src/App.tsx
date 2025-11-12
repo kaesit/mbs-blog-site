@@ -8,6 +8,7 @@ import Aurora from "./components/Aurora";
 import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
 import ai_variation from "./icons/ai-generate-variation-spark.svg";
+import FAQComponent from "./components/Faq";
 
 const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
   <div className="project-tags">
@@ -55,7 +56,15 @@ const App: React.FC = () => {
           transition={{ type: "spring", damping: 30, stiffness: 400 }}
           rotationInterval={2400}
         />
-        <div style={{display:"flex", flexDirection:"row", justifyContent:"center", gap:"12px", marginTop:"24px"}}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            gap: "12px",
+            marginTop: "24px",
+          }}
+        >
           <button className="join-us-button">Join Us</button>
           <button className="learn-more-button">Learn More</button>
         </div>
@@ -194,6 +203,9 @@ const App: React.FC = () => {
         </SpotlightCard>
       </div>
 
+      <div className="cards-grid">
+        <FAQComponent />
+      </div>
       {/* Footer */}
 
       <Footer />

@@ -21,7 +21,7 @@ const root = ReactDOM.createRoot(
 );
 
 {
-  /* COLORS #8B1E1E #00B7C2 #1A3C5D #001F54 */
+  /* COLORS #8B1E1E A02C2C #00B7C2 #1A3C5D #001F54 */
 }
 
 const items = [

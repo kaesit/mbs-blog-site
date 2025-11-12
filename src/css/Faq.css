@@ -1,0 +1,107 @@
+/*
+  FAQ.css - Basic Styles for the Accordion Component
+  
+  *NOTE*: Update the CSS variables below to match your site's color scheme
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+:root {
+  /* Customize these colors to match your mbs-blog-site style */
+  --primary-color: #7cea3c; /* A bright, modern color for accents */
+  --text-color: #f5ecec;
+  --secondary-text-color: #666;
+  --background-light: #2b2b2d;
+  --background-open: #17171c;
+  --border-color: #eee;
+  --transition-speed: 0.3s;
+}   
+
+.faq-container {
+  max-width: 900px; /* Standard blog content width */
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.faq-title {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 2em;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-list {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Cascadia Code", sans-serif;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  font-family: "Cascadia Code", sans-serif;
+
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  background-color: #0a0a0a;
+  color: var(--text-color);
+  padding: 18px 25px;
+  width: 100%;
+  text-align: left;
+  font-family: "Cascadia Code", sans-serif;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--transition-speed);
+}
+
+.faq-question:hover {
+  background-color: var(--background-light);
+}
+
+.faq-question.open {
+  background-color: var(--background-open);
+  color: var(--primary-color);
+}
+
+.faq-icon {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--secondary-text-color);
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.faq-question.open .faq-icon {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+/* Accordion Toggle Logic */
+
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-speed) ease-in-out;
+}
+
+.faq-answer-wrapper.open {
+  /* Set a height that is guaranteed to cover the content for the transition */
+  max-height: 500px; /* Adjust this if your answers are very long */
+}
+
+.faq-answer-content {
+  padding: 0 25px 20px 25px;
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+}

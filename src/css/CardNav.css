@@ -189,10 +189,9 @@
 
 .nav-card-link:hover {
   opacity: 0.9;
-  border: 1px solid rgba(235, 222, 222, 0.65);
   transition: 1.2s ease all;
   border-radius: 7px;
-  color: #ffffff; /* sitenin accent rengi */
+  color: #f1ffff; /* sitenin accent rengi */
   text-shadow: 0 0 4px rgba(147, 185, 225, 0.6); /* soft glow */
 }
 @media (max-width: 768px) {
