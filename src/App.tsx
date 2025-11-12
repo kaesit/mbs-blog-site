@@ -27,9 +27,9 @@ const App: React.FC = () => {
       <div className="background-gradient">
         <Aurora
           colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
-          blend={0.9}
+          blend={0.3}
           amplitude={1.0}
-          speed={0.5}
+          speed={0.8}
         />
       </div>
 

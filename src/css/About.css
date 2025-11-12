@@ -36,12 +36,17 @@ p{
 {
   display: flex;
   justify-content: center;
+  border-radius: 8px;
+  background-color: aquamarine;
+  /*background-color: #58f0b5;*/
+  box-shadow: 0 4px 15px rgba(35, 227, 125, 0.181);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-subtitle {
   font-size: 1.5rem;
   color: #f3ebeb;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; 
 }
 
 .about-hero-containers {
@@ -71,12 +76,6 @@ p{
   box-sizing: border-box;
 }
 
-.custom-spotlight-card {
-  border-radius: 12px;
-  /*background-color: #58f0b5;*/
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .card-content {
   display: flex;
@@ -86,7 +85,6 @@ p{
   gap: 1rem;
 }
 
-.card-icon {
-  width: 15px;
-  height: 15px;
+.card-content > img{
+  width: fit-content;
 }

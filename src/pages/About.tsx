@@ -9,6 +9,8 @@ import liberty_icon from "../icons/liberty_icon.svg";
 import project_icon from "../icons/project_icon.svg";
 import article_icon from "../icons/article_icon.svg";
 import blog_icon from "../icons/blog_icon.svg";
+import image1 from "../img/image1.jpg";
+
 import ExperienceSection from "../components/ExperienceSection";
 
 const items = [
@@ -46,7 +48,7 @@ const About: React.FC = () => {
         <div className="about-cards">
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(75, 218, 232, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 12, y: 12 }}
           >
             <div className="card-content">
@@ -61,7 +63,7 @@ const About: React.FC = () => {
 
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(125, 232, 75, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 32, y: 32 }}
           >
             <div className="card-content">
@@ -80,7 +82,7 @@ const About: React.FC = () => {
 
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(232, 75, 127, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 24, y: 24 }}
           >
             <div className="card-content">
@@ -100,7 +102,7 @@ const About: React.FC = () => {
         <div className="about-cards">
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(75, 218, 232, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 12, y: 12 }}
           >
             <div className="card-content">
@@ -119,7 +121,7 @@ const About: React.FC = () => {
 
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(125, 232, 75, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 32, y: 32 }}
           >
             <div className="card-content">
@@ -134,7 +136,7 @@ const About: React.FC = () => {
 
           <SpotlightCard
             className="about-spotlight-card"
-            spotlightColor="rgba(232, 75, 127, 0.75)"
+            spotlightColor="rgba(35, 118, 227, 0.469)"
             position={{ x: 24, y: 24 }}
           >
             <div className="card-content">
