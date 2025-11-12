@@ -9,7 +9,7 @@ import liberty_icon from "../icons/liberty_icon.svg";
 import project_icon from "../icons/project_icon.svg";
 import article_icon from "../icons/article_icon.svg";
 import blog_icon from "../icons/blog_icon.svg";
-
+import ExperienceSection from "../components/ExperienceSection";
 
 const items = [
   {
@@ -104,7 +104,11 @@ const About: React.FC = () => {
             position={{ x: 12, y: 12 }}
           >
             <div className="card-content">
-              <img src={article_icon} alt="Article Icon" className="card-icon" />
+              <img
+                src={article_icon}
+                alt="Article Icon"
+                className="card-icon"
+              />
               <h3>Article</h3>
               <p>
                 Building intelligent systems and smart automation tools to
@@ -119,11 +123,7 @@ const About: React.FC = () => {
             position={{ x: 32, y: 32 }}
           >
             <div className="card-content">
-              <img
-                src={blog_icon}
-                alt="Blog Icon"
-                className="card-icon"
-              />
+              <img src={blog_icon} alt="Blog Icon" className="card-icon" />
               <h3>Blog</h3>
               <p>
                 Creating forward-thinking solutions, experimenting with new
@@ -153,6 +153,9 @@ const About: React.FC = () => {
         </div>
       </div>
 
+      <div className="experience-section">
+        <ExperienceSection />
+      </div>
       {/* Footer */}
       <div style={{ position: "relative", zIndex: 1, paddingBottom: "0rem" }}>
         {/* Navbar, RotatingText, SpotlightCards vs */}

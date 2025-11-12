@@ -1,0 +1,154 @@
+/*
+  ExperienceAndSpotlight.css - Styles for Experience Timeline and Spotlight Card
+  
+  *NOTE*: Assuming the @import and :root definitions from your FAQ.css are either global
+  or included here. If you are using this file, ensure the font import is present.
+*/
+
+/* --- Global Styles & Variables (Re-included for context) --- */
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
+
+:root {
+  --primary-color: #5797d3; /* Bright Green/Cyan */
+  --hover-text-color: #58a6f0; /* Bright Blue */
+  --text-color: #f5ecec; /* Off-white */
+  --secondary-text-color: #a0a0a0; /* Lighter secondary text (adjusted from #666) */
+  --background-dark: transparent; /* Main Dark Background */
+  --background-light: #2b2b2d; /* Subtle Hover/Card Background */
+  --background-open: #17171c; /* Very Dark Gray */
+  --border-color: rgba(255, 255, 255, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* --- Experience Section (Timeline) Styles --- */
+
+.experience-section {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--background-dark);
+}
+
+.experience-header {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  left: 20px;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding-left: 30px; /* Space for the line */
+  list-style: none;
+}
+
+/* Vertical dividing line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Timeline bullet point (the primary color circle) */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px; /* Adjust to center on the line */
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 2px solid var(--background-dark);
+  z-index: 1;
+}
+
+.timeline-date {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.timeline-title {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.timeline-company {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 1em;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.timeline-description {
+  font-family: "Cascadia Code", sans-serif;
+  font-size: 1em;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+}
+
+
+/* --- Spotlight Card Styles --- */
+
+.spotlight-card {
+  font-family: "Cascadia Code", sans-serif;
+  background-color: var(--background-open);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform var(--transition-speed) ease-out, 
+              border-color var(--transition-speed),
+              box-shadow var(--transition-speed);
+}
+
+/* Hover effect: lift and highlight border */
+.spotlight-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 15px rgba(88, 240, 181, 0.2); /* Shadow matches primary color */
+}
+
+.card-icon {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card-title {
+  font-size: 1.4em;
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card-excerpt {
+  font-size: 0.95em;
+  color: var(--secondary-text-color);
+  line-height: 1.5;
+}

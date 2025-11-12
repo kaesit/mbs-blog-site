@@ -3,6 +3,7 @@
   background:linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
   align-items: center;
+  display: grid;
   font-family: "VVDS Fifties Exp SBold Italic";
 
 }
@@ -33,7 +34,6 @@ p{
 
 .about-spotlight-card
 {
-  background-color: red;
   display: flex;
   justify-content: center;
 }
@@ -49,6 +49,13 @@ p{
   flex-direction: row;
   text-align: center;
   padding: 0 2rem;
+}
+
+.experience-section
+{
+  margin-top: 15rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
 /* Spotlight kartlar */

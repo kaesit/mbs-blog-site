@@ -3,28 +3,29 @@
   
   *NOTE*: Update the CSS variables below to match your site's color scheme
 */
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
 
 :root {
   /* Customize these colors to match your mbs-blog-site style */
-  --primary-color: #7cea3c; /* A bright, modern color for accents */
+  --primary-color: #58f0b5; /* A bright, modern color for accents */
+  --hover-text-color: #58a6f0;
   --text-color: #f5ecec;
   --secondary-text-color: #666;
   --background-light: #2b2b2d;
   --background-open: #17171c;
-  --border-color: #eee;
+  --border-color: rgba(255, 255, 255, 0.1);
   --transition-speed: 0.3s;
-}   
+}
 
 .faq-container {
   max-width: 900px; /* Standard blog content width */
-  margin: 40px auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .faq-title {
   font-family: "Cascadia Code", sans-serif;
   font-size: 2em;
+  font-weight: 700;
   color: var(--text-color);
   text-align: center;
   margin-bottom: 30px;
@@ -41,7 +42,6 @@
 .faq-item {
   border-bottom: 1px solid var(--border-color);
   font-family: "Cascadia Code", sans-serif;
-
 }
 
 .faq-item:last-child {
@@ -55,11 +55,11 @@
   width: 100%;
   text-align: left;
   font-family: "Cascadia Code", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 1.1em;
-  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +68,7 @@
 
 .faq-question:hover {
   background-color: var(--background-light);
+  color: var(--hover-text-color);
 }
 
 .faq-question.open {
