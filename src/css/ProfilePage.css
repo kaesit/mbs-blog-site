@@ -1,5 +1,5 @@
 .profile-page {
-  background:linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
+  background: linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
   min-height: 100vh;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -9,8 +9,6 @@
   align-items: center;
 }
 
-
-
 .profile-owner {
   display: flex;
   align-items: center;
@@ -18,7 +16,6 @@
   gap: 1rem;
   margin-top: 6rem;
 }
-
 
 .profile-name > a {
   text-decoration: none;
@@ -29,9 +26,7 @@
   color: #58f0b5;
 }
 
-
-.grid_container
-{
+.grid_container {
   display: grid;
   width: 100%;
   margin-top: 2rem;
@@ -45,23 +40,121 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-
-
-.grid_container:hover 
-{
+.grid_container:hover {
   opacity: 0.7;
   transition: 1.2s ease;
-
 }
 
-.filter_section
-{
+.post-title-text {
+  position: absolute;
+  bottom: 130px; /* biraz daha yukarı alındı */
+  left: 20px;
+  opacity: 0;
+  font-size: 1rem;
+  font-family: "Cascadia Code", monospace;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid #808080a0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.post-title-text code {
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.post-date-text {
+  position: absolute;
+  bottom: 95px; /* başlıktan 30px aşağıda */
+  left: 20px;
+  opacity: 0;
+  font-size: 0.9rem;
+  font-family: "Cascadia Code", monospace;
+  color: #e4e4e4;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid #808080a0;
+  padding: 6px 11px;
+  border-radius: 6px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.post-date-text code {
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #e4e4e4;
+}
+.post-rate-text {
+  position: absolute;
+  bottom: 60px; /* tarihten 30px aşağıda */
+  left: 20px;
+  opacity: 0;
+  font-size: 0.9rem;
+  font-family: "Cascadia Code", monospace;
+  color: #58f0b5;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid #808080a0;
+  padding: 6px 11px;
+  border-radius: 6px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.post-rate-text code {
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.project-tags {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* tag’ler arası boşluk */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tech-tag {
+  font-size: 0.52rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #aef7de;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease-in-out, background 0.3s;
+}
+
+.tech-tag:hover {
+  background: rgba(88, 240, 181, 0.2);
+  color: #58f0b5;
+}
+
+.glare-hover {
+  position: relative; /* içindeki absolute elemanlar buna göre hizalanır */
+  overflow: hidden;
+}
+
+.glare-hover:hover .post-title-text,
+.glare-hover:hover .post-date-text,
+.glare-hover:hover .post-rate-text,
+.glare-hover:hover .project-tags,
+.glare-hover:hover .tech-tag {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.filter_section {
   width: 100%;
   margin-top: 2rem;
   border-bottom: 1px solid #444c54;
   display: flex;
   height: 5vh;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
   left: 10px;

@@ -41,13 +41,15 @@ const CustomMenu = styled(Menu)(() => ({
   },
 }));
 
-const BlogText = styled(Typography)({
-  fontFamily:
-    'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
-  fontSize: "1.1rem",
-  lineHeight: 1.8,
-  color: "#d7dedf",
-});
+const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
+  <div className="project-tags">
+    {tags.map((t) => (
+      <span key={t} className="tech-tag">
+        {t}
+      </span>
+    ))}
+  </div>
+);
 
 const BlogAvatar = styled(Avatar)({
   width: 50,
@@ -160,147 +162,324 @@ const ProfilePage: React.FC = () => {
       </div>
       {/* Blog İçerik */}
       <div className="grid_container">
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={600}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={600}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image10} alt="" />
-        </GlareHover>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={600}
+            playOnce={false}
+          >
+            <img style={{ width: "100%", height: "100%" }} src={image} alt="" />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={600}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image10}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
 
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={600}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image3} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.3}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={500}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image4} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={500}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image5} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={500}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image6} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={500}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image7} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={500}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image8} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="rgba(255, 255, 255, 0.1)"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={600}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image9} alt="" />
-        </GlareHover>
-        <GlareHover
-          width="270px"
-          height="270px"
-          borderColor="#343535ae"
-          borderRadius="12px"
-          glareColor="#ffffff"
-          glareOpacity={0.6}
-          glareAngle={-30}
-          glareSize={400}
-          transitionDuration={600}
-          playOnce={false}
-        >
-          <img style={{ width: "100%", height: "100%" }} src={image9} alt="" />
-        </GlareHover>
+        <a href="blog/">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={600}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image3}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            className="glare-hover"
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.3}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={500}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%", objectFit: "fill" }}
+              src={image4}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={500}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image5}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={500}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image6}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={500}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image7}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={500}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image8}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/blog">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="rgba(255, 255, 255, 0.1)"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={600}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image9}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
+        <a href="/">
+          <GlareHover
+            width="270px"
+            height="270px"
+            borderColor="#343535ae"
+            borderRadius="12px"
+            glareColor="#ffffff"
+            glareOpacity={0.6}
+            glareAngle={-30}
+            glareSize={400}
+            transitionDuration={600}
+            playOnce={false}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={image9}
+              alt=""
+            />
+            <div className="post-title-text">
+              <code>Is AI will take over?</code>
+            </div>
+            <div className="post-date-text">
+              <code>Post Date: 13.11.2025</code>
+            </div>
+            <div className="post-rate-text">
+              <code>⭐️⭐️⭐️⭐️⭐️</code>
+            </div>
+            <ProjectTags
+              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
+            />
+          </GlareHover>
+        </a>
       </div>
 
       {/* Footer */}
