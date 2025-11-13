@@ -19,18 +19,12 @@ import image8 from "../img/image8.jpg";
 import image9 from "../img/image9.jpg";
 import image10 from "../img/image10.png";
 
-
 import project_icon from "../icons/project_icon.svg";
 import article_icon from "../icons/article_icon.svg";
 import all_icon from "../icons/all_icon.svg";
 import blog_icon from "../icons/blog_icon.svg";
 import video_icon from "../icons/video_icon.svg";
 import menu_icon from "../icons/menu_icons.svg";
-
-
-
-
-
 
 const CustomMenu = styled(Menu)(() => ({
   "& .MuiPaper-root": {
@@ -40,7 +34,8 @@ const CustomMenu = styled(Menu)(() => ({
     fontWeight: "700",
     borderRadius: "0.75rem",
     border: "1px solid rgba(255, 255, 255, 0.18)",
-    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(147, 185, 225, 0.2)",
+    boxShadow:
+      "0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(147, 185, 225, 0.2)",
     minWidth: 200,
     padding: "0.5rem 0",
   },
@@ -79,14 +74,14 @@ const ActionButton = styled(Button)({
   color: "#fff",
   borderRadius: "0.75rem",
   textTransform: "none",
-  border: "1px solid rgba(255, 255, 255, 0.3)",
+  border: "1px solid rgba(255, 255, 255, 0.1)",
   fontWeight: 600,
   fontFamily:
     'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
   "&:hover": {
-    backgroundColor: "#49afee9c",
+    color: "#34dfa5",
+    borderColor: "#34dfa5",
   },
-
 });
 
 const ProfilePage: React.FC = () => {
@@ -101,25 +96,66 @@ const ProfilePage: React.FC = () => {
         <Typography className="blog-date">Oct 13, 2025</Typography>
       </div>
 
-
       <div className="filter_section">
         <div>
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={all_icon} alt="" />All</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={all_icon}
+              alt=""
+            />
+            All
+          </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={video_icon} alt="" />Videos</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={video_icon}
+              alt=""
+            />
+            Videos
+          </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={blog_icon} alt="" />Blogs</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={blog_icon}
+              alt=""
+            />
+            Blogs
+          </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={project_icon} alt="" />Projects</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={project_icon}
+              alt=""
+            />
+            Projects
+          </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={article_icon} alt="" />Articles</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={article_icon}
+              alt=""
+            />
+            Articles
+          </ActionButton>
         </div>
         <div className="more-filter-div">
-          <ActionButton variant="contained"><img style={{width:"15px", height:"15px", marginRight: "8px"}} src={menu_icon} alt="" />More Option</ActionButton>
+          <ActionButton variant="contained">
+            <img
+              style={{ width: "15px", height: "15px", marginRight: "8px" }}
+              src={menu_icon}
+              alt=""
+            />
+            More Option
+          </ActionButton>
         </div>
       </div>
       {/* Blog İçerik */}
@@ -127,8 +163,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -141,8 +177,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -156,8 +192,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -170,8 +206,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.3}
           glareAngle={-30}
@@ -184,8 +220,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -198,8 +234,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -212,8 +248,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -226,8 +262,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -240,8 +276,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="rgba(255, 255, 255, 0.1)"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}
@@ -254,8 +290,8 @@ const ProfilePage: React.FC = () => {
         <GlareHover
           width="270px"
           height="270px"
-          borderColor="#3f6cf4"
-          borderRadius="25px"
+          borderColor="#343535ae"
+          borderRadius="12px"
           glareColor="#ffffff"
           glareOpacity={0.6}
           glareAngle={-30}

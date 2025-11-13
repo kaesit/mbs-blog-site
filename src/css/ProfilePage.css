@@ -1,5 +1,5 @@
 .profile-page {
-  background: linear-gradient(180deg, #0d1a2f 0%, #1a2a44 50%, #2b3e5a 100%);
+  background:linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
   min-height: 100vh;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -38,7 +38,7 @@
   gap: 0.4rem;
   justify-content: center;
   padding-left: 5px;
-  opacity: 0.8;
+  opacity: 1;
   transition: 1.2s ease;
   align-items: center;
   box-sizing: border-box;
@@ -49,7 +49,7 @@
 
 .grid_container:hover 
 {
-  opacity: 0.9;
+  opacity: 0.7;
   transition: 1.2s ease;
 
 }

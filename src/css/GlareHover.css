@@ -38,6 +38,7 @@
 .glare-hover:hover {
   cursor: pointer;
   transition: 1.5s ease;
+  border: 1px solid #34dfa5;
   opacity: 1;
 }
 
