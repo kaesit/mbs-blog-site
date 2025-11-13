@@ -35,7 +35,7 @@ const CustomMenu = styled(Menu)(() => ({
   "& .MuiPaper-root": {
     background: "rgba(17, 17, 17, 0.55)",
     color: "#d7dedf",
-    fontFamily: "Lekton",
+    fontFamily: "Cascadia Code sans-serif",
     fontWeight: "700",
     borderRadius: "0.75rem",
     border: "1px solid rgba(255, 255, 255, 0.18)",

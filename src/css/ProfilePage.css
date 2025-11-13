@@ -1,3 +1,4 @@
+
 .profile-page {
   background: linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
@@ -133,6 +134,14 @@
   background: rgba(88, 240, 181, 0.2);
   color: #58f0b5;
 }
+.action-btn-icon {
+  filter: brightness(1);
+}
+
+.ActionButton:hover .action-btn-icon {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(90%) saturate(356%) hue-rotate(110deg);
+}
+
 
 .glare-hover {
   position: relative; /* içindeki absolute elemanlar buna göre hizalanır */
@@ -160,6 +169,12 @@
   left: 10px;
   right: 10px;
   gap: 0.4rem;
+}
+
+.account-created-date > p
+{
+  font-size: 1.1rem;
+  font-family: "Cascadia Code", monospace;
 }
 
 /*.more-filter-div {

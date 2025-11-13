@@ -22,6 +22,7 @@ import image10 from "../img/image10.png";
 import project_icon from "../icons/project_icon.svg";
 import article_icon from "../icons/article_icon.svg";
 import all_icon from "../icons/all_icon.svg";
+import { ReactComponent as AllIcon } from "../icons/all_icon.svg";
 import blog_icon from "../icons/blog_icon.svg";
 import video_icon from "../icons/video_icon.svg";
 import menu_icon from "../icons/menu_icons.svg";
@@ -95,23 +96,26 @@ const ProfilePage: React.FC = () => {
         <Typography className="profile-name">
           <a href="/profilepage">Esad Abdullah Kösedağ</a>
         </Typography>
-        <Typography className="blog-date">Oct 13, 2025</Typography>
+        <Typography className="account-created-date"><p>Oct 13, 2025</p></Typography>
       </div>
 
       <div className="filter_section">
         <div>
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={all_icon}
               alt=""
             />
+            
             All
           </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={video_icon}
               alt=""
@@ -120,8 +124,9 @@ const ProfilePage: React.FC = () => {
           </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={blog_icon}
               alt=""
@@ -130,8 +135,9 @@ const ProfilePage: React.FC = () => {
           </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={project_icon}
               alt=""
@@ -140,8 +146,9 @@ const ProfilePage: React.FC = () => {
           </ActionButton>
         </div>
         <div>
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={article_icon}
               alt=""
@@ -150,8 +157,9 @@ const ProfilePage: React.FC = () => {
           </ActionButton>
         </div>
         <div className="more-filter-div">
-          <ActionButton variant="contained">
+          <ActionButton className="ActionButton" variant="contained">
             <img
+              className="action-btn-icon"
               style={{ width: "15px", height: "15px", marginRight: "8px" }}
               src={menu_icon}
               alt=""
@@ -463,7 +471,7 @@ const ProfilePage: React.FC = () => {
           >
             <img
               style={{ width: "100%", height: "100%" }}
-              src={image9}
+              src={image2}
               alt=""
             />
             <div className="post-title-text">
