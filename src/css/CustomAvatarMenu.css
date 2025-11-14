@@ -1,11 +1,23 @@
-a {
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+
+.avatar-container
+{
+    font-family: "Cascadia Code", monospace;
+}
+
+
+.avatar-menu-links {
+    font-family: "Cascadia Code", monospace;
     color: #d7dedf;
     text-decoration: none;
     underline: none;
 }
 
-a:hover
+.avatar-menu-links:hover
 {
+    font-family: "Cascadia Code", monospace;
     text-decoration: none;
     underline: none;
     color: #34dfa5;

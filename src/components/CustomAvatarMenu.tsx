@@ -22,7 +22,6 @@ const CustomAvatar = styled(Avatar)(() => ({
   border: "none",
   borderRadius: "0.75rem",
   transition: "0.3s",
-  fontFamily: "Lekton",
   fontWeight: "700",
   "&:hover": {
     color: "#34dfa5",
@@ -33,9 +32,8 @@ const CustomAvatar = styled(Avatar)(() => ({
 
 const CustomMenu = styled(Menu)(() => ({
   "& .MuiPaper-root": {
-    background: "rgba(17, 17, 17, 0.55)",
+    background: "#161a20",
     color: "#d7dedf",
-    fontFamily: "Cascadia Code sans-serif",
     fontWeight: "700",
     borderRadius: "0.75rem",
     border: "1px solid rgba(255, 255, 255, 0.18)",
@@ -47,7 +45,6 @@ const CustomMenu = styled(Menu)(() => ({
 }));
 
 const CustomMenuItem = styled(MenuItem)(() => ({
-  fontFamily: "Cascadia Code sans-serif",
   fontWeight: "700",
   "&:hover": {
     backgroundColor: "rgba(147,185,225,0.15)",
@@ -73,7 +70,7 @@ const CustomAvatarMenu: React.FC = () => {
         @import
         url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
       </style>
-      <CustomAvatar onClick={handleClick}>
+      <CustomAvatar className="avatar-container" onClick={handleClick}>
         <Person2RoundedIcon></Person2RoundedIcon>
       </CustomAvatar>
       <CustomMenu
@@ -89,33 +86,33 @@ const CustomAvatarMenu: React.FC = () => {
           horizontal: "right",
         }}
       >
-        <a href="/signin">
+        <a className="avatar-menu-links" href="/signin">
           <CustomMenuItem onClick={handleClose}>
             <LoginRoundedIcon
               fontSize="medium"
               style={{ marginRight: "8px" }}
             ></LoginRoundedIcon>
-            <Typography variant="body2">Sign In</Typography>
+            <Typography sx={{ fontFamily: "Cascadia Code", fontWeight: "700"}} variant="body2">Sign In</Typography>
           </CustomMenuItem>
         </a>
-        <a href="/profilepage">
+        <a className="avatar-menu-links" href="/profilepage">
           <CustomMenuItem onClick={handleClose}>
             <AccountCircle fontSize="medium" style={{ marginRight: "8px" }} />
-            <Typography variant="body2">Profile</Typography>
+            <Typography sx={{ fontFamily: "Cascadia Code", fontWeight: "700"}} variant="body2">Profile</Typography>
           </CustomMenuItem>
         </a>
 
-        <a href="/settings">
+        <a className="avatar-menu-links" href="/settings">
           <CustomMenuItem onClick={handleClose}>
             <Settings fontSize="medium" style={{ marginRight: "8px" }} />
-            <Typography variant="body2">Settings</Typography>
+            <Typography sx={{ fontFamily: "Cascadia Code", fontWeight: "700"}} variant="body2">Settings</Typography>
           </CustomMenuItem>
         </a>
         <Divider style={{ background: "rgba(255,255,255,0.1)" }} />
-        <a href="/logout">
+        <a className="avatar-menu-links" href="/logout">
           <CustomMenuItem onClick={handleClose}>
             <Logout fontSize="medium" style={{ marginRight: "8px" }} />
-            <Typography variant="body2">Logout</Typography>
+            <Typography sx={{ fontFamily: "Cascadia Code", fontWeight: "700"}}variant="body2">Logout</Typography>
           </CustomMenuItem>
         </a>
       </CustomMenu>
