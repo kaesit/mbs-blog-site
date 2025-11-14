@@ -3,7 +3,7 @@
 .blog-page {
   background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
   color: #d7dedf;
-  font-family: "VVDS Fifties Exp SBold Italic", sans-serif;
+  font-family: "VVDS Fifties Exp SBold", sans-serif;
   font-weight: 700;
   display: flex; /* grid yerine flex */
   flex-direction: column; /* dikey akış */

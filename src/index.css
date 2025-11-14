@@ -3,7 +3,6 @@
 
 body {
   margin: 0;
-  font-family: "Fira Code", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
@@ -23,10 +22,10 @@ pre {
 /* Hero */
 .titleOfMainPage {
   color: #e0f0ff;
-  font-family: "VVDS Fifties Exp SBold Italic", sans-serif;
+  font-family: "VVDS Fifties SExp Bold", sans-serif;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25);
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin-bottom: 1.5rem;
   padding: 0.3rem 0.6rem;
   border-radius: 1.75rem;
@@ -89,6 +88,7 @@ pre {
   flex-direction: row;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   width: 100%;
+  font-family: "VVDS Fifties SExp Bold", sans-serif;
   margin-top: 8rem;
   gap: 2rem;
   justify-content: center;
@@ -207,6 +207,7 @@ pre {
   }
 
   .custom-spotlight-card:nth-child(-n + 3) h3 {
+    font-family: "VVDS Fifties SExp Bold", sans-serif;
     font-size: 1.45rem;
     margin: 0 0 0.25rem 0;
     color: #e6f6ff;
