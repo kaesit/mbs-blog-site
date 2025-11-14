@@ -22,7 +22,7 @@ pre {
 /* Hero */
 .titleOfMainPage {
   color: #e0f0ff;
-  font-family: "VVDS Fifties SExp Bold", sans-serif;
+  font-family: "VVDS Fifties Exp SBold", sans-serif;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25);
   font-weight: 800;
   font-size: 4.5rem;
@@ -207,7 +207,7 @@ pre {
   }
 
   .custom-spotlight-card:nth-child(-n + 3) h3 {
-    font-family: "VVDS Fifties SExp Bold", sans-serif;
+    font-family: "VVDS Fifties Exp SBold", sans-serif;
     font-size: 1.45rem;
     margin: 0 0 0.25rem 0;
     color: #e6f6ff;
