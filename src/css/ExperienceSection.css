@@ -8,18 +8,6 @@
 /* --- Global Styles & Variables (Re-included for context) --- */
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
 
-:root {
-  --primary-color: #58f0b5; /* Bright Green/Cyan */
-  --hover-text-color: #4cce9c; /* Bright Blue */
-  --text-color: #f5ecec; /* Off-white */
-  --secondary-text-color: #a0a0a0; /* Lighter secondary text (adjusted from #666) */
-  --background-dark: transparent; /* Main Dark Background */
-  --background-light: #2b2b2d; /* Subtle Hover/Card Background */
-  --background-open: #17171c; /* Very Dark Gray */
-  --border-color: rgba(255, 255, 255, 0.1);
-  --transition-speed: 0.3s;
-}
-
 /* --- Experience Section (Timeline) Styles --- */
 
 .experience-section {
