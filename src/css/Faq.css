@@ -11,12 +11,12 @@
   --hover-text-color: #4cce9c;
   --text-color: #f5ecec;
   --secondary-text-color: #666;
-  --background-light: #2b2b2d;
+  --background-light: #1f222d;
   --background-open: #17171c;
   --border-color: rgba(255, 255, 255, 0.05);
   --transition-speed: 0.3s;
 }
-
+  
 .faq-container {
   max-width: 900px; /* Standard blog content width */
   padding: 10px;
