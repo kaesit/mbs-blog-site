@@ -5,6 +5,7 @@ import RotatingText from "./components/RotatingText";
 import SpotlightCard from "./components/SpotlightCard";
 import ai_icon from "./icons/ai_icon.svg";
 import Aurora from "./components/Aurora";
+import Silk from "./components/Silk";
 import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
 import ai_variation from "./icons/ai-generate-variation-spark.svg";
@@ -23,13 +24,29 @@ const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
 const App: React.FC = () => {
   return (
     <>
-      {/* Background gradient */}
+      {/* Background gradient 
+      
+      
+
+        <Silk
+          speed={3}
+          scale={1}
+          color="#2f64f6"
+          noiseIntensity={1.1}
+          rotation={0}
+          "#0095ff", "#00eaff", "#0072fd"
+          "#0095ff", "#e7ef15", "#ff1616"
+        />
+      
+      
+      */}
       <div className="background-gradient">
+
         <Aurora
           colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
-          blend={0.3}
+          blend={0.5}
           amplitude={1.0}
-          speed={0.8}
+          speed={1.0}
         />
       </div>
 

@@ -33,7 +33,7 @@
 
 .faq-list {
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 18px;
   font-family: "Cascadia Code", sans-serif;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -41,6 +41,7 @@
 
 .faq-item {
   border-bottom: 1px solid var(--border-color);
+  border-radius: 18px;
   font-family: "Cascadia Code", sans-serif;
 }
 
@@ -55,7 +56,7 @@
   width: 100%;
   text-align: left;
   font-family: "Cascadia Code", sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 400;
   border: none;
   cursor: pointer;
@@ -72,7 +73,6 @@
 }
 
 .faq-question.open {
-  background-color: var(--background-open);
   color: var(--primary-color);
 }
 
