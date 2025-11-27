@@ -26,21 +26,7 @@ const App: React.FC = () => {
     <>
       {/* Background gradient 
       
-      <Aurora
-          colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={1.0}
-        />
-
-        "#0095ff", "#00eaff", "#0072fd"
-          "#0095ff", "#e7ef15", "#ff1616"
       
-      
-      */}
-      <div className="background-gradient">
-
-        
 
         <Silk
           speed={3}
@@ -49,6 +35,19 @@ const App: React.FC = () => {
           noiseIntensity={1.1}
           rotation={0}
           
+        />
+
+        "#0095ff", "#00eaff", "#0072fd"
+          "#0095ff", "#e7ef15", "#ff1616"
+      
+      
+      */}
+      <div className="background-gradient">
+        <Aurora
+          colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={1.0}
         />
       </div>
 
