@@ -31,7 +31,7 @@ import image10 from "../img/image10.png";
 
 // --- MOCK DATA & ASSETS ---
 const AVATAR_IMG =
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=800&q=80";
+  "https://images.unsplash.com/photo-1564931768730-7e4d8e240044?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29vbCUyMHNvZnR3YXJlJTIwZW5naW5lZXJ8ZW58MHx8MHx8fDA%3D";
 
 // Farklı resimlerden oluşan bir dizi
 const BLOG_IMAGES = [
@@ -46,6 +46,20 @@ const BLOG_IMAGES = [
   image9,
   image10,
 ];
+
+const BLOG_IMAGES2 = [
+  "https://images.unsplash.com/photo-1618015360024-ccee40620891?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXJuYXxlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1764654372145-f62eb6ef7238?q=80&w=954&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dimage",
+  "https://images.unsplash.com/photo-1712075404796-7a575ee484dd?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbXB1dGVyJTIwdmlzaW9ufGVufDB8fDB8fHww",
+  "https://images.unsplash.com/photo-1648854006531-361649aa182c?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmlnbWF8ZW58MHx8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHl0aG9ufGVufDB8fDB8fHww",
+  "https://www.therobotreport.com/wp-content/uploads/2025/09/Laundry_Open_Graph_Image-copy.jpg",
+  "https://plus.unsplash.com/premium_photo-1683836722608-60ab4d1b58e5?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWQlMjBzb2Z0d2FyZXxlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVpfGVufDB8fDB8fHww",
+  "https://i.ytimg.com/vi/gox0q--CoUs/maxresdefault.jpg",
+  image10,
+];
+
 
 // --- STYLED COMPONENTS ---
 
@@ -218,52 +232,59 @@ const ProfilePage: React.FC = () => {
   const posts = [
     {
       id: 1,
+      title: "OncoMind AI Platform",
+      date: "20.10.2025",
+      tags: ["Python", "OpenCV"],
+    },
+    {
+      id: 2,
       title: "Is AI taking over?",
       date: "13.11.2025",
       tags: ["PyTorch", "ONNX"],
     },
     {
-      id: 2,
+      id: 3,
       title: "Computer Vision Advances",
       date: "10.11.2025",
       tags: ["Blockchain", "Solidity"],
     },
     {
-      id: 3,
+      id: 4,
       title: "Framer vs Figma",
       date: "08.11.2025",
       tags: ["Frontend", "JS"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Pythonic code",
       date: "05.11.2025",
       tags: ["Physics", "Qubit"],
     },
     {
-      id: 5,
+      id: 6,
       title: "AI Trends",
       date: "01.11.2025",
       tags: ["Security", "Network"],
     },
     {
-      id: 6,
+      id: 7,
       title: "Cloud Architecture",
       date: "28.10.2025",
       tags: ["AWS", "Azure"],
     },
     {
-      id: 7,
+      id: 8,
       title: "Art of designing UI",
       date: "25.10.2025",
       tags: ["Flutter", "Dart"],
     },
     {
-      id: 8,
+      id: 9,
       title: "Python and Cpp for OpenGL",
       date: "20.10.2025",
       tags: ["Python", "Pandas"],
     },
+    
   ];
 
   return (
@@ -430,7 +451,7 @@ const ProfilePage: React.FC = () => {
           <GlareHover key={post.id}>
             {/* Modulo (%) operatörü ile resimler döngüye girer, resim sayısı az olsa bile hata vermez */}
             <img
-              src={BLOG_IMAGES[index % BLOG_IMAGES.length]}
+              src={BLOG_IMAGES2[index % BLOG_IMAGES2.length]}
               alt={post.title}
             />
             <CardContent>
