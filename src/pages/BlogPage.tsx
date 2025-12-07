@@ -140,7 +140,7 @@ const BlogPage: React.FC = () => {
   return (
     <div className="blog-page">
       <header className="blog-header">
-        <h1 ><p className="blog-title">Newest Blogs</p></h1>
+        <h1 className="blog-title">Newest Blogs</h1>
       </header>
 
       <div className="blog-list">

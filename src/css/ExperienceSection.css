@@ -35,7 +35,7 @@
 
 /* Vertical dividing line */
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +51,7 @@
 
 /* Timeline bullet point (the primary color circle) */
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -20px; /* Adjust to center on the line */
   top: 0px;
@@ -64,7 +64,7 @@
 }
 
 .timeline-date {
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 0.9em;
   color: var(--primary-color);
   margin-bottom: 5px;
@@ -72,7 +72,7 @@
 }
 
 .timeline-title {
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 1.2em;
   color: var(--text-color);
   margin-top: 0;
@@ -81,7 +81,7 @@
 }
 
 .timeline-company {
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 1em;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
@@ -89,17 +89,16 @@
 }
 
 .timeline-description {
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Poiret One", sans-serif;
   font-size: 1em;
   color: var(--secondary-text-color);
   line-height: 1.5;
 }
 
-
 /* --- Spotlight Card Styles --- */
 
 .spotlight-card {
-  font-family: "Cascadia Code", sans-serif;
+  font-family: "Poiret One", sans-serif;
   background-color: var(--background-open);
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -107,9 +106,8 @@
   margin: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transition: transform var(--transition-speed) ease-out, 
-              border-color var(--transition-speed),
-              box-shadow var(--transition-speed);
+  transition: transform var(--transition-speed) ease-out,
+    border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 /* Hover effect: lift and highlight border */

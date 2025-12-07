@@ -59,8 +59,8 @@ const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
           fontFamily:"Poiret One, sans-serif",
           fontWeight: 500,
           fontSize: "0.75rem",
-          background: "rgba(88, 240, 181, 0.2)",
-          color: "#58f0b5",
+          background: "linear-gradient(90deg, rgba(58, 134, 255, 0.08),rgba(46, 196, 182, 0.06))",
+          color: "#ffffffd2",
           padding: "2px 6px",
           borderRadius: "4px",
         }}

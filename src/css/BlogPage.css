@@ -1,9 +1,9 @@
 
 
 .blog-page {
-  background:linear-gradient(180deg, #18191c 0%, #161b22 50%, #161a20 100%);
+  background: linear-gradient(90deg, #0040ff10 0%, #000000 50%, #0d0f11 100%);
   color: #d7dedf;
-  font-family: "VVDS Fifties Exp SBold", sans-serif;
+  font-family: "VVDS Fifties Exp SBold";
   font-weight: 700;
   display: flex; /* grid yerine flex */
   flex-direction: column; /* dikey akış */
@@ -48,6 +48,21 @@
   background-color: #1fffc0;
   flex-direction: column;
   height: 100%;
+  justify-content: center;
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 134, 255, 0.08),
+    rgba(46, 196, 182, 0.06)
+  );
+  box-shadow: 0 16px 50px rgba(2, 6, 23, 0.62), 0 6px 20px rgba(3, 8, 20, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-skeleton {

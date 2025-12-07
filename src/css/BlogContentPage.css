@@ -1,7 +1,7 @@
 .blog-content-page {
   display: grid;
   grid-template-columns: auto;
-  background:linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
+  background: linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
   color: #d7dedf;
   min-height: 100vh;
   font-family: "VVDS Fifties Exp SBold Italic";
@@ -15,7 +15,6 @@
   text-align: center;
   margin-top: 6rem;
 }
-
 
 .blog-author-meta {
   display: flex;
@@ -43,6 +42,11 @@
   margin-top: 4rem;
   max-width: 85vw;
   width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 134, 255, 0.08),
+    rgba(46, 196, 182, 0.06)
+  );
   padding: 2rem;
 }
 
@@ -51,7 +55,11 @@
   grid-template-columns: 1fr;
   margin-top: 4rem;
   max-width: 85vw;
-
+  background: linear-gradient(
+    90deg,
+    rgba(58, 134, 255, 0.08),
+    rgba(46, 196, 182, 0.06)
+  );
   width: 100%;
 }
 .blog-content-text {
@@ -60,7 +68,7 @@
   gap: 1.5rem;
 }
 
-.little-news-cards{
+.little-news-cards {
   width: 50%;
   margin-top: 2rem;
   gap: 2rem;

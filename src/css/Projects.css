@@ -1,6 +1,6 @@
 /* Genel sayfa ayarları */
 .projects-page {
-  background:linear-gradient(90deg, #0a0b0e 0%, #060c15 50%, #0a0b0d 100%);
+  background: linear-gradient(90deg, #0040ff10 0%, #000000 50%, #0d0f11 100%);
   color: #d7dedf;
   align-items: center;
   font-family: "VVDS Fifties Exp SBold";
@@ -37,6 +37,30 @@
   padding: 0 4rem;
   box-sizing: border-box;
 }
+/* DUNYANIN EN GARIP CSS KURALINI KESFETTIM AMA COK GUZEL GORUNUYOR
+.project-cards :nth-child(-n + 3) {
+  justify-content: center;
+  grid-column: 1 / -1;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.25rem;
+  border-radius: 14px;
+  min-height: 220px;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 134, 255, 0.08),
+    rgba(46, 196, 182, 0.06)
+  );
+  box-shadow: 0 16px 50px rgba(2, 6, 23, 0.62), 0 6px 20px rgba(3, 8, 20, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+*/
 
 .card-content {
   display: flex;
