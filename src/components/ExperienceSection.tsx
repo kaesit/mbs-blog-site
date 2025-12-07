@@ -37,6 +37,15 @@ const experienceData: Job[] = [
       "Developed lot of modules for ERP systems that using Devextreme, NodeJS and C# .NET technologies.",
     tags: ["NodeJS", "C# .NET", "Devextreme", "ERP Systems"],
   },
+  {
+    id: 4,
+    dateRange: "Jan 2025 - Jun 2025",
+    title: "Software Engineer and Scrum Master",
+    company: "BB Bilişim Teknolojileri",
+    description:
+      "Developed a AI driven travel guide, booking and managament application for our University project to accomplish our first year graduation project. Also managed the team as Scrum Master.",
+    tags: ["NodeJS", "Python", "Google Cloud", "LLM APIs", "Scrum"],
+  },
 ];
 
 const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
@@ -47,7 +56,9 @@ const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
       <span
         key={t}
         style={{
-          fontSize: "0.65rem",
+          fontFamily:"Poiret One, sans-serif",
+          fontWeight: 500,
+          fontSize: "0.75rem",
           background: "rgba(88, 240, 181, 0.2)",
           color: "#58f0b5",
           padding: "2px 6px",

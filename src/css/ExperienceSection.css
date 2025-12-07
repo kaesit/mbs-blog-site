@@ -29,7 +29,7 @@
 .timeline {
   position: relative;
   margin: 0;
-  padding-left: 30px; /* Space for the line */
+  padding-left: 40px; /* Space for the line */
   list-style: none;
 }
 
@@ -46,7 +46,6 @@
 
 .timeline-item {
   position: relative;
-  padding-bottom: 30px;
   margin-bottom: 20px;
 }
 
@@ -54,8 +53,8 @@
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -9px; /* Adjust to center on the line */
-  top: 5px;
+  left: -20px; /* Adjust to center on the line */
+  top: 0px;
   width: 14px;
   height: 14px;
   border-radius: 50%;
