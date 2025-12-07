@@ -31,7 +31,7 @@ import image10 from "../img/image10.png";
 
 // --- MOCK DATA & ASSETS ---
 const AVATAR_IMG =
-  "https://images.unsplash.com/photo-1564931768730-7e4d8e240044?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29vbCUyMHNvZnR3YXJlJTIwZW5naW5lZXJ8ZW58MHx8MHx8fDA%3D";
+  "https://plus.unsplash.com/premium_vector-1721134009431-d4f8137839ca?w=352&dpr=2&h=367&auto=format&fit=crop&q=60&ixlib=rb-4.1.0";
 
 // Farklı resimlerden oluşan bir dizi
 const BLOG_IMAGES = [
@@ -76,12 +76,12 @@ const PageContainer = styled("div")({
 
 const CustomMenu = styled(Menu)(() => ({
   "& .MuiPaper-root": {
-    background: "#161a20",
+    background: "#070707ff",
     color: "#d7dedf",
     fontFamily: "Lekton", // Fallback will occur if font not loaded
     fontWeight: "700",
     borderRadius: "0.75rem",
-    border: "1px solid rgba(255, 255, 255, 0.18)",
+    border: "1px solid rgba(138, 136, 136, 0.5)",
     boxShadow:
       "0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(147, 185, 225, 0.2)",
     minWidth: 200,
@@ -121,7 +121,7 @@ const ActionButton = styled(Button)({
 const BlogAvatar = styled(Avatar)({
   width: 80,
   height: 80,
-  border: "2px solid #58f0b5",
+  border: "2px solid #58f0b6b0",
   borderRadius: "0.75rem",
   marginBottom: "1rem",
 });
@@ -385,11 +385,11 @@ const ProfilePage: React.FC = () => {
             onClose={handleClose}
             anchorOrigin={{
               vertical: "bottom",
-              horizontal: "right",
+              horizontal: "center",
             }}
             transformOrigin={{
               vertical: "top",
-              horizontal: "right",
+              horizontal: "center",
             }}
           >
             <CustomMenuItem onClick={handleClose}>
