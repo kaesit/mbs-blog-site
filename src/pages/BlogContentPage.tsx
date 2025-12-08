@@ -35,8 +35,8 @@ const BlogTitle = styled(Typography)({
 
 const BlogText = styled(Typography)({
   fontFamily:
-    'source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace',
-  fontSize: "1.1rem",
+    'source-code-pro, monospace',
+  fontSize: "0.9rem",
   lineHeight: 1.8,
   color: "#d7dedf",
 });
@@ -49,7 +49,7 @@ const BlogAvatar = styled(Avatar)({
 });
 
 const SectionTitle = styled(Typography)({
-  fontFamily: "Lekton",
+  fontFamily: "Poiret One",
   fontWeight: 700,
   fontSize: "1.5rem",
   color: "#58f0b5",
