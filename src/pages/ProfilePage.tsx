@@ -57,7 +57,7 @@ const BLOG_IMAGES2 = [
   "https://plus.unsplash.com/premium_photo-1683836722608-60ab4d1b58e5?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWQlMjBzb2Z0d2FyZXxlbnwwfHwwfHx8MA%3D%3D",
   "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVpfGVufDB8fDB8fHww",
   "https://i.ytimg.com/vi/gox0q--CoUs/maxresdefault.jpg",
-  image10,
+  "https://plus.unsplash.com/premium_photo-1765020473739-aa7206a1fc16?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3BlbkNWfGVufDB8fDB8fHww",
 ];
 
 
@@ -234,19 +234,19 @@ const ProfilePage: React.FC = () => {
       id: 1,
       title: "OncoMind AI Platform",
       date: "20.10.2025",
-      tags: ["Python", "OpenCV"],
+      tags: ["Python", "OpenCV", "PyTorch", "ONNX"],
     },
     {
       id: 2,
       title: "Is AI taking over?",
       date: "13.11.2025",
-      tags: ["PyTorch", "ONNX"],
+      tags: ["Software Engineering", "Futuristic Topics"],
     },
     {
       id: 3,
       title: "Computer Vision Advances",
       date: "10.11.2025",
-      tags: ["Blockchain", "Solidity"],
+      tags: ["Computer Vision", "Solidity"],
     },
     {
       id: 4,
@@ -258,33 +258,38 @@ const ProfilePage: React.FC = () => {
       id: 5,
       title: "Pythonic code",
       date: "05.11.2025",
-      tags: ["Physics", "Qubit"],
+      tags: ["Python", "Code"],
     },
     {
       id: 6,
       title: "AI Trends",
       date: "01.11.2025",
-      tags: ["Security", "Network"],
+      tags: ["Technology", "Robotics"],
     },
     {
       id: 7,
       title: "Cloud Architecture",
       date: "28.10.2025",
-      tags: ["AWS", "Azure"],
+      tags: ["AWS", "Google Cloud"],
     },
     {
       id: 8,
       title: "Art of designing UI",
       date: "25.10.2025",
-      tags: ["Flutter", "Dart"],
+      tags: ["Art", "Humanity", "UI"],
     },
     {
       id: 9,
       title: "Python and Cpp for OpenGL",
       date: "20.10.2025",
-      tags: ["Python", "Pandas"],
+      tags: ["Python", "OpenGL"],
     },
-    
+    {
+      id: 10,
+      title: "Python for DeepLearning and OpenCV",
+      date: "20.10.2025",
+      tags: ["Python", "OpenCV"],
+    },
   ];
 
   return (
