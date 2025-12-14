@@ -33,7 +33,6 @@ const BlogAvatar = styled(Avatar)({
   borderRadius: "0.75rem",
 });
 
-
 const BlogPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -100,17 +99,16 @@ const BlogPage: React.FC = () => {
           id: 7,
           img: image7,
           title: "Human and Human Being",
-          excerpt:
-            "Being human is same with being a human being?",
+          excerpt: "Being human is same with being a human being?",
           author: "Esad A. Kösedağ",
           date: "10 Eylül 2025",
         },
         {
           id: 8,
           img: image8,
-          title: "How can we improve our innovative thinking by using AI Tools in a minimal way?",
-          excerpt:
-            "A blog about improving oour thinking style.",
+          title:
+            "How can we improve our innovative thinking by using AI Tools in a minimal way?",
+          excerpt: "A blog about improving oour thinking style.",
           author: "Esad A. Kösedağ",
           date: "10 Eylül 2025",
         },
@@ -127,8 +125,7 @@ const BlogPage: React.FC = () => {
           id: 10,
           img: image10,
           title: "Interuniversal Fungal Civilization",
-          excerpt:
-            "A brain storm about aliens.",
+          excerpt: "A brain storm about aliens.",
           author: "Esad A. Kösedağ",
           date: "10 Eylül 2025",
         },
@@ -178,14 +175,20 @@ const BlogPage: React.FC = () => {
                       <Typography className="blog-author">
                         <a href="/about">{post.author}</a>
                       </Typography>
-                      <Typography><p className="blog-date">{post.date}</p></Typography>
+                      <Typography>
+                        <p className="blog-date">{post.date}</p>
+                      </Typography>
                     </div>
+                    <a className="read_content_link" href="/blogcontentpage"><button className="read_content_button">Read</button></a>
                   </div>
                 </div>
               </SpotlightCard>
             ))}
       </div>
-      <div className="footer-wrapper" style={{ position: "relative", zIndex: 1 }}>
+      <div
+        className="footer-wrapper"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         {/* Navbar, RotatingText, SpotlightCards vs */}
         <Footer />
       </div>
