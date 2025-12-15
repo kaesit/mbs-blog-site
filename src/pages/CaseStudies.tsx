@@ -8,10 +8,8 @@ import image3 from "../img/image13.jpg";
 import image4 from "../img/image14.jpg";
 import image5 from "../img/image15.jpg";
 
-
 import { Skeleton, Avatar, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-
 
 interface BlogPost {
   id: number;
@@ -30,7 +28,6 @@ const BlogAvatar = styled(Avatar)({
   borderRadius: "0.75rem",
 });
 
-
 const CaseStudies: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -46,7 +43,7 @@ const CaseStudies: React.FC = () => {
           excerpt:
             "You're gonna experince how we shape the future of all industries with AI solutions.",
           author: "Esad A. Kösedağ",
-          author_image:image,
+          author_image: image,
           date: "14 Eylül 2025",
         },
         {
@@ -56,7 +53,7 @@ const CaseStudies: React.FC = () => {
           excerpt:
             "Liberty and its advantages in computer science and open source technologies",
           author: "Esad A. Kösedağ",
-          author_image:image2, 
+          author_image: image2,
           date: "10 Eylül 2025",
         },
         {
@@ -66,7 +63,7 @@ const CaseStudies: React.FC = () => {
           excerpt:
             "Optimize your college life with choosing correct computer science lectures by your interest.",
           author: "Esad A. Kösedağ",
-          author_image:image3,
+          author_image: image3,
           date: "10 Eylül 2025",
         },
         {
@@ -76,7 +73,7 @@ const CaseStudies: React.FC = () => {
           excerpt:
             "AI powered game engine tools and new game production methods are really changing the game development but at same time stories are evolving backwards.",
           author: "Esad A. Kösedağ",
-          author_image:image4,
+          author_image: image4,
           date: "10 Eylül 2025",
         },
         {
@@ -86,7 +83,7 @@ const CaseStudies: React.FC = () => {
           excerpt:
             "Tesla's new optimus robots are gonna help us to colonize mars.",
           author: "Esad A. Kösedağ",
-          author_image:image5,
+          author_image: image5,
           date: "10 Eylül 2025",
         },
       ]);
@@ -100,49 +97,95 @@ const CaseStudies: React.FC = () => {
         <h1 className="case-blog-title">Case Studies 0 </h1>
       </header>
 
-      <div className="case-blog-list">
-        {loading
-          ? [1, 2, 3].map((s) => (
-              <SpotlightCard
-                key={s}
-                className="case-blog-card"
-                spotlightColor="rgba(60, 36, 147, 0.25)"
-                position={{ x: 12, y: 12 }}
-              >
-                <div className="case-blog-skeleton">
-                  <Skeleton variant="text" width="80%" height={36} />
-                  <Skeleton variant="text" width="95%" height={24} />
-                  <Skeleton variant="text" width="90%" height={24} />
-                  <div className="case-blog-meta">
-                    <Skeleton variant="circular" width={40} height={40} />
-                    <Skeleton variant="text" width="40%" height={20} />
-                  </div>
-                </div>
-              </SpotlightCard>
-            ))
-          : posts.map((post) => (
-              <SpotlightCard
-                key={post.id}
-                className="case-blog-card"
-                spotlightColor="rgba(60, 36, 147, 0.25)"
-                position={{ x: 12, y: 12 }}
-              >
-                <div className="case-blog-content">
-                  <img className="case-blog-image" src={post.img} alt="" />
-                  <h2 className="case-blog-post-title">{post.title}</h2>
-                  <p className="case-blog-excerpt">{post.excerpt}</p>
-                  <div className="case-blog-meta">
-                    <BlogAvatar alt="Author" src={post.author_image} />
-                    <div>
-                      <Typography className="case-blog-author">
-                        <a href="/about">{post.author}</a>
-                      </Typography>
-                      <Typography className="case-blog-date">{post.date}</Typography>
+      <div className="case-studies-main-container">
+        <div className="search-menu-container">
+          Filter By
+          <a className="case-studies-blog-filter-buttons" href="">
+            Project
+            <div className="filter-count">115</div>
+          </a>
+          <a className="case-studies-blog-filter-buttons" href="">
+            Code
+            <div className="filter-count">115</div>
+          </a>
+          <a className="case-studies-blog-filter-buttons" href="">
+            Issues
+            <div className="filter-count">115</div>
+          </a>
+          <a className="case-studies-blog-filter-buttons" href="">
+            Discussions
+            <div className="filter-count">115</div>
+          </a>
+          <a className="case-studies-blog-filter-buttons" href="">
+            Users
+            <div className="filter-count">115</div>
+          </a>
+          <pre className="case-studies-divider"></pre>
+          <div>
+            <h2>Name Search</h2>
+            <input className="text-input" type="text" />
+          </div>
+          <pre className="case-studies-divider"></pre>
+          <div></div>
+        </div>
+
+        <div className="case-blog-list">
+          {loading
+            ? [1, 2, 3].map((s) => (
+                <SpotlightCard
+                  key={s}
+                  className="case-blog-card"
+                  spotlightColor="rgba(60, 36, 147, 0.25)"
+                  position={{ x: 12, y: 12 }}
+                >
+                  <div className="case-blog-skeleton">
+                    <Skeleton variant="text" width="80%" height={36} />
+                    <Skeleton variant="text" width="95%" height={24} />
+                    <Skeleton variant="text" width="90%" height={24} />
+                    <div className="case-blog-meta">
+                      <Skeleton variant="circular" width={40} height={40} />
+                      <Skeleton variant="text" width="40%" height={20} />
                     </div>
                   </div>
-                </div>
-              </SpotlightCard>
-            ))}
+                </SpotlightCard>
+              ))
+            : posts.map((post) => (
+                <SpotlightCard
+                  key={post.id}
+                  className="case-blog-card"
+                  spotlightColor="rgba(60, 36, 147, 0.25)"
+                  position={{ x: 12, y: 12 }}
+                >
+                  <div className="case-blog-content">
+                    <div style={{ display: "flex", flexDirection: "row" }}>
+                      <img className="case-blog-image" src={post.img} alt="" />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: "0",
+                          marginLeft: "0.6rem",
+                        }}
+                      >
+                        <h2 className="case-blog-post-title">{post.title}</h2>
+                        <p className="case-blog-excerpt">{post.excerpt}</p>
+                      </div>
+                      <div className="case-blog-meta">
+                        <BlogAvatar alt="Author" src={post.author_image} />
+                        <div>
+                          <Typography className="case-blog-author">
+                            <a href="/about">{post.author}</a>
+                          </Typography>
+                          <Typography className="case-blog-date">
+                            {post.date}
+                          </Typography>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SpotlightCard>
+              ))}
+        </div>
       </div>
       <div
         className="footer-wrapper"
