@@ -163,7 +163,7 @@ const CaseStudies: React.FC = () => {
                         style={{
                           display: "flex",
                           flexDirection: "column",
-                          gap: "0",
+                          gap: "0px",
                           marginLeft: "0.6rem",
                         }}
                       >

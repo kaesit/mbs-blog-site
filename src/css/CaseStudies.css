@@ -68,7 +68,7 @@
 .case-studies-blog-filter-buttons:hover {
   cursor: pointer;
   color: #58f0b5;
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(37, 35, 35);
   border-radius: 5px;
 }
 .filter-count {
@@ -78,11 +78,11 @@
   display: flex;
   text-decoration: dotted;
   text-align: center;
-  background-color: rgba(79, 78, 78, 0.676);
+  background-color: #58f0b5;
   border-radius: 25px;
   padding: 0 0.5rem;
   left: 80px;
-  color: #b0c0d0;
+  color: #161a20;
   text-decoration: none;
   font-weight: 400;
 }
@@ -154,23 +154,29 @@
   position: relative;
   float: right;
   border-radius: 1.75rem;
+  bottom: 16px;
   color: #58f0b5; /* Daha canlı bir yeşil tonu */
 }
 
 .case-blog-excerpt {
+  position: relative;
   font-size: 1rem;
   line-height: 1.6;
   color: #d7dedf;
   flex-grow: 1;
+  bottom: 48px;
 }
 
 .case-blog-meta {
+  width: 250px;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
   position: relative;
-  float: right;
+  left: 1.8rem;
   align-items: center;
   gap: 0.8rem;
   border-radius: 0.75rem;
-  margin-top: auto;
 }
 
 .case-blog-meta > a {
