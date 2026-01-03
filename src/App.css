@@ -87,9 +87,27 @@ body {
   letter-spacing: 0.06em;
   color: #3b82f6; /* Accent color */
   white-space: nowrap;
+  margin: 0;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #ffffff, #1fa9e9, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: subtleGradient 8s ease infinite;
   padding-bottom: 10px; /* Prevent cutting off descenders */
 }
 
+@keyframes subtleGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
 /* Buttons */
 .hero-buttons {
   margin-top: 4rem;
