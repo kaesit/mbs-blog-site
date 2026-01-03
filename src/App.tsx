@@ -1,230 +1,289 @@
-import React from "react";
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import "./App.css";
+
+// Icons
 import Footer from "./components/Footer";
-import RotatingText from "./components/RotatingText";
-import SpotlightCard from "./components/SpotlightCard";
+import FAQComponent from "./components/Faq";
 import ai_icon from "./icons/ai_icon.svg";
-import Aurora from "./components/Aurora";
-import Silk from "./components/Silk";
 import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
-import ai_variation from "./icons/ai-generate-variation-spark.svg";
-import FAQComponent from "./components/Faq";
 
-const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
-  <div className="project-tags">
-    {tags.map((t) => (
-      <span key={t} className="tech-tag">
-        {t}
-      </span>
-    ))}
-  </div>
-);
+gsap.registerPlugin(useGSAP);
 
+/* --- 1. CLEAN AURORA --- */
+const AuroraBackground = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // Smoother, slower animation for a cleaner vibe
+      gsap.utils.toArray(".aurora-blob").forEach((blob: any) => {
+        gsap.to(blob, {
+          x: "random(-50, 50)",
+          y: "random(-50, 50)",
+          scale: "random(0.9, 1.1)",
+          duration: "random(10, 20)", // Slower duration = less frantic
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true,
+        });
+      });
+    },
+    { scope: containerRef }
+  );
+
+  return (
+    <div className="aurora-container" ref={containerRef}>
+      <div
+        className="aurora-blob"
+        style={{
+          background: "#3b82f6",
+          width: "50vw",
+          height: "50vw",
+          top: "-10%",
+          left: "-10%",
+          opacity: 0.3,
+        }}
+      />
+      <div
+        className="aurora-blob"
+        style={{
+          background: "#3b82f6",
+          width: "40vw",
+          height: "40vw",
+          top: "20%",
+          right: "-10%",
+          opacity: 0.25,
+        }}
+      />
+      <div
+        className="aurora-blob"
+        style={{
+          background: "#48ec63",
+          width: "45vw",
+          height: "45vw",
+          bottom: "-10%",
+          left: "20%",
+          opacity: 0.2,
+        }}
+      />
+    </div>
+  );
+};
+
+/* --- 2. IMPACT ROTATING TEXT --- */
+const RotatingText = ({ words }: { words: string[] }) => {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const track = trackRef.current;
+      if (!track) return;
+
+      // Get the height dynamically or assume logic based on CSS (1em height usually)
+      const tl = gsap.timeline({ repeat: -1 });
+
+      words.forEach((_, index) => {
+        // Calculate percentage move: -100% * index
+        const yPercent = index * 100;
+
+        tl.to(track, {
+          y: `-${yPercent}%`,
+          duration: 0.8,
+          ease: "power3.inOut", // Stronger ease for "Impact" feel
+        }).to({}, { duration: 2 }); // Hold
+      });
+
+      // Reset loop
+      tl.to(track, { y: 0, duration: 0.8, ease: "power3.inOut" });
+    },
+    { scope: trackRef }
+  );
+
+  return (
+    <div className="rotating-text-wrapper">
+      <div ref={trackRef} style={{ display: "flex", flexDirection: "column" }}>
+        {words.map((word, i) => (
+          <span className="rotating-word" key={i}>
+            {word}
+          </span>
+        ))}
+        {/* Duplicate first word for seamless loop illusion if desired, but simplified here */}
+      </div>
+    </div>
+  );
+};
+
+/* --- 3. CLEAN SPOTLIGHT CARD --- */
+const SpotlightCard = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode;
+  onClick?: () => void;
+}) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    cardRef.current.style.setProperty("--mouse-x", `${x}px`);
+    cardRef.current.style.setProperty("--mouse-y", `${y}px`);
+  };
+
+  return (
+    <div
+      className="spotlight-card"
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onClick={onClick}
+    >
+      <div className="spotlight-overlay" />
+      <div className="card-content">{children}</div>
+    </div>
+  );
+};
+
+/* --- MAIN COMPONENT --- */
 const App: React.FC = () => {
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    // Intro Animation
+    tl.from(".static-title", {
+      y: 100,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power4.out",
+    })
+      .from(
+        ".rotating-text-wrapper",
+        { y: 50, opacity: 0, duration: 1 },
+        "-=0.8"
+      )
+      .from(
+        ".cta-button",
+        { y: 20, opacity: 0, stagger: 0.1, duration: 0.8 },
+        "-=0.6"
+      )
+      .from(
+        ".spotlight-card",
+        { y: 100, opacity: 0, stagger: 0.2, duration: 1, ease: "power2.out" },
+        "-=0.4"
+      );
+  });
+
   return (
     <>
-      {/* Background gradient 
-      
-      
+      <AuroraBackground />
 
-        <Silk
-          speed={3}
-          scale={1}
-          color="#191d5e"
-          noiseIntensity={1.1}
-          rotation={0}
-          
-        />
-
-        "#0095ff", "#00eaff", "#0072fd"
-          "#0095ff", "#e7ef15", "#ff1616"
-      
-      
-      */}
-      <div className="background-gradient">
-        <Aurora
-          colorStops={["#0095ff", "#e7ef15", "#ff1616"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={1.0}
-        />
-      </div>
-
-      {/* Hero section */}
       <div className="hero-container">
-        <h1 className="titleOfMainPage">
-          <span>Mbs is</span>
-        </h1>
+        <div className="hero-title-wrapper">
+          <h1 className="static-title">MBS IS</h1>
+          <RotatingText words={["FUTURE", "REALITY", "GROWTH", "SPEED"]} />
+        </div>
 
-        <RotatingText
-          texts={[
-            "Protecting Reality",
-            "Engineering Tomorrow",
-            "Developing Yourself",
-            "Shaping the Future",
-          ]}
-          mainClassName="rotating-text"
-          staggerFrom={"last"}
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "-150%" }}
-          staggerDuration={0.03}
-          splitLevelClassName="overflow-hidden"
-          transition={{ type: "spring", damping: 30, stiffness: 400 }}
-          rotationInterval={2400}
-        />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            gap: "12px",
-            marginTop: "24px",
-          }}
-        >
-          <button className="join-us-button">Join Us</button>
-          <button className="learn-more-button">Learn More</button>
+        <div className="hero-buttons">
+          <button className="cta-button primary">Join the Team</button>
+          <button className="cta-button secondary">View Work</button>
         </div>
       </div>
 
-      {/* Spotlight cards */}
-      <div className="cards-grid">
-        <SpotlightCard
-          className="custom-spotlight-card"
-          spotlightColor="rgba(87, 160, 248, 0.75)"
-          position={{ x: 12, y: 12 }}
-        >
-          <span>
-            <img src={ai_icon} alt="AI" />
-            <h3>AI Solutions</h3>
-            <pre>
-              <code>
-                Production-ready computer vision pipelines (object detection,
-                segmentation, OCR) and model deployment for embedded & cloud
-                platforms. Focus: latency, robustness and explainability.
-              </code>
-            </pre>
-            <div className="card-details">
-              <div>
-                <strong>Selected project</strong>
-                <div>Retail shelf-monitoring — 98% accuracy (prod)</div>
-              </div>
-              <div>
-                <strong>Impact</strong>
-                <div>Reduced audit time by 70%</div>
-              </div>
-            </div>
-            <ProjectTags
-              tags={["PyTorch", "ONNX", "Edge-Deploy", "CI/CD", "Quantization"]}
-            />
-            <div className="card-buttons">
-              <a className="spotlight-index-button" href="/projects/vision">
-                Case Study
-              </a>
-              <a className="ghost-button" href="https://github.com/kaesit">
-                Code
-              </a>
-            </div>
-          </span>
-        </SpotlightCard>
+      <div className="cards-section">
+        <div className="section-header">Selected Expertise</div>
 
-        <SpotlightCard
-          className="custom-spotlight-card"
-          spotlightColor="rgba(248, 243, 87, 0.75)"
-          position={{ x: 32, y: 32 }}
-        >
-          <span>
-            <img src={innovation_icon} alt="Innovation" />
-            <h3>Innovation</h3>
-            <pre>
-              <code>
-                Rapid prototyping and proof-of-concept work that turns novel
-                ideas into product-ready features. I ship experiments fast and
-                measure signal with strong telemetry.
-              </code>
-            </pre>
-            <div className="card-details">
-              <div>
-                <strong>Notable</strong>
-                <div>
-                  Adaptive recommendation engine used in beta by partners
-                </div>
-              </div>
-              <div>
-                <strong>Approach</strong>
-                <div>A/B, instrumentation, safe rollouts</div>
+        <div className="cards-grid">
+          {/* Card 1: AI */}
+          <SpotlightCard>
+            <div className="card-icon-wrapper">
+              <img src={ai_icon} alt="AI" />
+            </div>
+            <h3 className="card-title">AI Solutions</h3>
+            <p className="card-description">
+              Production-ready computer vision pipelines and robust model
+              deployment for embedded & cloud platforms.
+            </p>
+            <div className="card-stats">
+              <div className="stat-item">
+                <strong>98% Accuracy</strong>
+                <span>Retail shelf-monitoring production</span>
               </div>
             </div>
-            <ProjectTags
-              tags={[
-                "Go/TS",
-                "Kubernetes",
-                "Feature Flags",
-                "MLOps",
-                "A/B Testing",
-              ]}
-            />
-            <div className="card-buttons">
-              <a className="spotlight-index-button" href="/projects/innovation">
-                Read Story
-              </a>
-              <a className="ghost-button" href="https://github.com/kaesit">
-                Repo
+            <div className="tags-container">
+              <span className="tag">PyTorch</span>
+              <span className="tag">Edge Deploy</span>
+            </div>
+            <div className="card-links">
+              <a href="/projects/vision" className="text-link">
+                View Case Study →
               </a>
             </div>
-          </span>
-        </SpotlightCard>
+          </SpotlightCard>
 
-        <SpotlightCard
-          className="custom-spotlight-card"
-          spotlightColor="rgba(248, 87, 146, 0.75)"
-          position={{ x: 24, y: 24 }}
-        >
-          <span>
-            <img src={liberty_icon} alt="Liberty" />
-            <h3>Liberty</h3>
-            <pre>
-              <code>
-                Privacy-aware interfaces, audit-friendly designs and transparent
-                models. I build with human agency, explainability and minimum
-                necessary data in mind.
-              </code>
-            </pre>
-            <div className="card-details">
-              <div>
-                <strong>Focus</strong>
-                <div>Consent-first UX, model cards, audit logs</div>
-              </div>
-              <div>
-                <strong>Outcome</strong>
-                <div>Increased user trust in pilot cohort</div>
+          {/* Card 2: Innovation */}
+          <SpotlightCard>
+            <div className="card-icon-wrapper">
+              <img src={innovation_icon} alt="Innovation" />
+            </div>
+            <h3 className="card-title">Innovation</h3>
+            <p className="card-description">
+              Rapid prototyping that turns novel ideas into product-ready
+              features using data-driven experiments.
+            </p>
+            <div className="card-stats">
+              <div className="stat-item">
+                <strong>Adaptive Engine</strong>
+                <span>Used in beta by key partners</span>
               </div>
             </div>
-            <ProjectTags
-              tags={[
-                "Privacy by Design",
-                "TypeScript",
-                "Accessible UX",
-                "Policy",
-              ]}
-            />
-            <div className="card-buttons">
-              <a className="spotlight-index-button" href="/writing/ethics">
-                Read Writing
-              </a>
-              <a className="ghost-button" href="mailto:hello@mbs.example">
-                Contact
+            <div className="tags-container">
+              <span className="tag">Go / TS</span>
+              <span className="tag">MLOps</span>
+            </div>
+            <div className="card-links">
+              <a href="/projects/innovation" className="text-link">
+                Read Story →
               </a>
             </div>
-          </span>
-        </SpotlightCard>
+          </SpotlightCard>
+
+          {/* Card 3: Liberty */}
+          <SpotlightCard>
+            <div className="card-icon-wrapper">
+              <img src={liberty_icon} alt="Liberty" />
+            </div>
+            <h3 className="card-title">Liberty</h3>
+            <p className="card-description">
+              Privacy-aware interfaces and transparent models built with human
+              agency at the core.
+            </p>
+            <div className="card-stats">
+              <div className="stat-item">
+                <strong>Consent First</strong>
+                <span>Increased user trust metric</span>
+              </div>
+            </div>
+            <div className="tags-container">
+              <span className="tag">Privacy by Design</span>
+              <span className="tag">UX</span>
+            </div>
+            <div className="card-links">
+              <a href="/writing/ethics" className="text-link">
+                Read Writing →
+              </a>
+            </div>
+          </SpotlightCard>
+        </div>
+
+        <center>
+          <div style={{ marginTop: "2rem" }}>
+            <FAQComponent />
+          </div>
+        </center>
       </div>
-
-      <div className="cards-grid">
-        <FAQComponent />
-      </div>
-      {/* Footer */}
 
       <Footer />
     </>
