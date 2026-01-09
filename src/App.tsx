@@ -65,7 +65,7 @@ const AuroraBackground = () => {
           width: "45vw",
           height: "45vw",
           bottom: "-10%",
-          left: "20%",
+          left: "25%",
           opacity: 0.2,
         }}
       />

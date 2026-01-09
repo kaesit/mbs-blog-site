@@ -88,7 +88,6 @@ body {
   color: #3b82f6; /* Accent color */
   white-space: nowrap;
   margin: 0;
-  line-height: 1.15;
   background: linear-gradient(135deg, #ffffff, #1fe973, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
