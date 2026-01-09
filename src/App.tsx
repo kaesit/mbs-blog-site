@@ -137,7 +137,7 @@ const SpotlightCard = ({
 
   return (
     <div
-      className="spotlight-card"
+      className="spotlight-main-card"
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onClick={onClick}

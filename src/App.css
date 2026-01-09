@@ -161,17 +161,17 @@ body {
 .cards-grid {
   position: relative;
   display: grid;
-  bottom: 12rem;
+  bottom: 6rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.5rem; /* More breathing room */
 }
 
 /* --- CLEAN SPOTLIGHT CARD --- */
-.spotlight-card {
+.spotlight-main-card {
   position: relative;
   border-radius: 24px;
   background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
+  border: 4px solid var(--card-border);
   padding: 3rem; /* More padding inside cards */
   display: flex;
   flex-direction: column;
@@ -196,10 +196,10 @@ body {
   z-index: 0;
 }
 
-.spotlight-card:hover .spotlight-overlay {
+.spotlight-main-card:hover .spotlight-overlay {
   opacity: 1;
 }
-.spotlight-card:hover {
+.spotlight-main-card:hover {
   border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-8px);
 }
