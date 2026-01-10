@@ -56,7 +56,6 @@ Here is the list of thing you can edit:
  - Project title
  - Photo titles
  - Placeholders
- - 
 
 ## Delete a content
 We're not storing your deleted content for 7 days or 90 days like other platforms, we just delete, so if you press **Delete** button don't forget you cannot undo.
