@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  background-color: var(--bg-dark);
+  background: linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: var(--text-main);
   font-family: "VVDS Fifties Sexp Bold", sans-serif; /* Clean Sans-Serif */
   -webkit-font-smoothing: antialiased;

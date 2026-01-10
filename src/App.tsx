@@ -178,7 +178,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <AuroraBackground />
+      {/*<AuroraBackground />*/}
 
       <div className="hero-container">
         <div className="hero-title-wrapper">
