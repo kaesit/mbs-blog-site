@@ -19,7 +19,6 @@
   
 .faq-container {
   max-width: 1200px; /* Standard blog content width */
-  padding: 10px;
 }
 
 .faq-title {
@@ -97,8 +96,7 @@
 .faq-answer-wrapper.open {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #131415;
-  /* Set a height that is guaranteed to cover the content for the transition */
-  max-height: 500px; /* Adjust this if your answers are very long */
+  max-height: 500px;
 }
 
 .faq-answer-content {
