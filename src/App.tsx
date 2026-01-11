@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import "./App.css";
-
+import "./index.css";
 // Icons
 import Footer from "./components/Footer";
 import FAQComponent from "./components/Faq";
@@ -125,25 +125,92 @@ const SpotlightCard = ({
   onClick?: () => void;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || !overlayRef.current) return;
+
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    cardRef.current.style.setProperty("--mouse-x", `${x}px`);
-    cardRef.current.style.setProperty("--mouse-y", `${y}px`);
+
+    overlayRef.current.style.setProperty("--x", `${x}px`);
+    overlayRef.current.style.setProperty("--y", `${y}px`);
+
+    gsap.to(cardRef.current, {
+      rotateX: (y / rect.height - 0.5) * -6,
+      rotateY: (x / rect.width - 0.5) * 6,
+      duration: 0.4,
+      ease: "power3.out",
+    });
+  };
+
+  const handleMouseLeave = () => {
+    if (!cardRef.current) return;
+    gsap.to(cardRef.current, {
+      rotateX: 0,
+      rotateY: 0,
+      y: 0,
+      scale: 1,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  };
+
+  const handleMouseEnter = () => {
+    if (!cardRef.current) return;
+    gsap.to(cardRef.current, {
+      y: -8,
+      scale: 1.01,
+      duration: 0.4,
+      ease: "power3.out",
+    });
   };
 
   return (
     <div
-      className="spotlight-main-card"
       ref={cardRef}
       onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={handleMouseEnter}
       onClick={onClick}
+      className="
+        relative group cursor-pointer
+        rounded-3xl p-8
+        bg-white/[0.04]
+        border border-white/10
+        backdrop-blur-xl
+        transition-colors
+        overflow-hidden
+      "
+      style={{ transformStyle: "preserve-3d" }}
     >
-      <div className="spotlight-overlay" />
-      <div className="card-content">{children}</div>
+      {/* Spotlight */}
+      <div
+        ref={overlayRef}
+        className="
+          pointer-events-none absolute inset-0
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500
+        "
+        style={{
+          background:
+            "radial-gradient(600px circle at var(--x) var(--y), rgba(99,102,241,0.15), transparent 40%)",
+        }}
+      />
+
+      {/* Border glow */}
+      <div
+        className="
+          absolute inset-0 rounded-3xl
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-500
+          ring-1 ring-inset ring-indigo-400/20
+        "
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col gap-6">{children}</div>
     </div>
   );
 };
@@ -198,83 +265,152 @@ const App: React.FC = () => {
         <div className="cards-grid">
           {/* Card 1: AI */}
           <SpotlightCard>
-            <div className="card-icon-wrapper">
-              <img src={ai_icon} alt="AI" />
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                <img src={ai_icon} alt="AI" className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
             </div>
-            <h3 className="card-title">AI Solutions</h3>
-            <p className="card-description">
+
+            <p className="text-gray-400 leading-relaxed">
               Production-ready computer vision pipelines and robust model
               deployment for embedded & cloud platforms.
             </p>
-            <div className="card-stats">
-              <div className="stat-item">
-                <strong>98% Accuracy</strong>
-                <span>Retail shelf-monitoring production</span>
-              </div>
+
+            <div className="rounded-xl bg-white/5 p-4">
+              <strong className="text-white block">98% Accuracy</strong>
+              <span className="text-sm text-gray-400">
+                Retail shelf-monitoring production
+              </span>
             </div>
-            <div className="tags-container">
-              <span className="tag">PyTorch</span>
-              <span className="tag">Edge Deploy</span>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                PyTorch
+              </span>
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                Edge Deploy
+              </span>
             </div>
-            <div className="card-links">
-              <a href="/projects/vision" className="text-link">
-                View Case Study →
-              </a>
-            </div>
+
+            <a
+              href="/projects/vision"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+            >
+              View Case Study →
+            </a>
           </SpotlightCard>
 
           {/* Card 2: Innovation */}
           <SpotlightCard>
-            <div className="card-icon-wrapper">
-              <img src={innovation_icon} alt="Innovation" />
-            </div>
-            <h3 className="card-title">Innovation</h3>
-            <p className="card-description">
-              Rapid prototyping that turns novel ideas into product-ready
-              features using data-driven experiments.
-            </p>
-            <div className="card-stats">
-              <div className="stat-item">
-                <strong>Adaptive Engine</strong>
-                <span>Used in beta by key partners</span>
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
+              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
             </div>
-            <div className="tags-container">
-              <span className="tag">Go / TS</span>
-              <span className="tag">MLOps</span>
+
+            <p className="text-gray-400 leading-relaxed">
+              Production-ready computer vision pipelines and robust model
+              deployment for embedded & cloud platforms.
+            </p>
+
+            <div className="rounded-xl bg-white/5 p-4">
+              <strong className="text-white block">98% Accuracy</strong>
+              <span className="text-sm text-gray-400">
+                Retail shelf-monitoring production
+              </span>
             </div>
-            <div className="card-links">
-              <a href="/projects/innovation" className="text-link">
-                Read Story →
-              </a>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                PyTorch
+              </span>
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                Edge Deploy
+              </span>
             </div>
+
+            <a
+              href="/projects/vision"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+            >
+              View Case Study →
+            </a>
           </SpotlightCard>
 
           {/* Card 3: Liberty */}
           <SpotlightCard>
-            <div className="card-icon-wrapper">
-              <img src={liberty_icon} alt="Liberty" />
-            </div>
-            <h3 className="card-title">Liberty</h3>
-            <p className="card-description">
-              Privacy-aware interfaces and transparent models built with human
-              agency at the core.
-            </p>
-            <div className="card-stats">
-              <div className="stat-item">
-                <strong>Consent First</strong>
-                <span>Increased user trust metric</span>
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
+              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
             </div>
-            <div className="tags-container">
-              <span className="tag">Privacy by Design</span>
-              <span className="tag">UX</span>
+
+            <p className="text-gray-400 leading-relaxed">
+              Production-ready computer vision pipelines and robust model
+              deployment for embedded & cloud platforms.
+            </p>
+
+            <div className="rounded-xl bg-white/5 p-4">
+              <strong className="text-white block">98% Accuracy</strong>
+              <span className="text-sm text-gray-400">
+                Retail shelf-monitoring production
+              </span>
             </div>
-            <div className="card-links">
-              <a href="/writing/ethics" className="text-link">
-                Read Writing →
-              </a>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                PyTorch
+              </span>
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                Edge Deploy
+              </span>
             </div>
+
+            <a
+              href="/projects/vision"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+            >
+              View Case Study →
+            </a>
+          </SpotlightCard>
+          <SpotlightCard>
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                <img src={ai_icon} alt="AI" className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+            </div>
+
+            <p className="text-gray-400 leading-relaxed">
+              Production-ready computer vision pipelines and robust model
+              deployment for embedded & cloud platforms.
+            </p>
+
+            <div className="rounded-xl bg-white/5 p-4">
+              <strong className="text-white block">98% Accuracy</strong>
+              <span className="text-sm text-gray-400">
+                Retail shelf-monitoring production
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                PyTorch
+              </span>
+              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+                Edge Deploy
+              </span>
+            </div>
+
+            <a
+              href="/projects/vision"
+              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+            >
+              View Case Study →
+            </a>
           </SpotlightCard>
         </div>
 
