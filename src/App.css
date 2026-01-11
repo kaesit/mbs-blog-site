@@ -120,28 +120,32 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
   letter-spacing: -0.02em;
 }
 
 .cta-button.primary {
-  background: #ffffff;
+  background: #1fe973;
   color: #000000;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .cta-button.primary:hover {
-  transform: scale(1.05);
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
+
 }
 
 .cta-button.secondary {
   background: transparent;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
+
 }
 .cta-button.secondary:hover {
-  border-color: #ffffff;
   background: rgba(255, 255, 255, 0.05);
+  border-bottom: 4px solid #1fe973;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
 }
 
 /* --- GRID LAYOUT --- */
