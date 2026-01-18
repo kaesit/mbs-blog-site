@@ -50,7 +50,7 @@ pre {
 .learn-more-button {
   width: 125px;
   height: 40px;
-  font-family: "VVDS Fifties Exp SBold";
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 200;
   color: white;
   background-color: transparent;

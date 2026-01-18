@@ -195,11 +195,10 @@ const SpotlightCard = ({
         "
         style={{
           background:
-            "radial-gradient(600px circle at var(--x) var(--y), rgba(99,102,241,0.15), transparent 40%)",
+            "radial-gradient(600px circle at var(--x) var(--y), rgba(135, 241, 99, 0.15), transparent 40%)",
         }}
       />
 
-      {/* Border glow */}
       <div
         className="
           absolute inset-0 rounded-3xl
@@ -266,7 +265,7 @@ const App: React.FC = () => {
           {/* Card 1: AI */}
           <SpotlightCard>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+              <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
@@ -285,17 +284,17 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 PyTorch
               </span>
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 Edge Deploy
               </span>
             </div>
 
             <a
               href="/projects/vision"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+              className="text-green-400 hover:text-green-300 transition-colors text-sm"
             >
               View Case Study →
             </a>
@@ -304,7 +303,7 @@ const App: React.FC = () => {
           {/* Card 2: Innovation */}
           <SpotlightCard>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+              <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
@@ -323,17 +322,17 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 PyTorch
               </span>
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 Edge Deploy
               </span>
             </div>
 
             <a
               href="/projects/vision"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+              className="text-green-400 hover:text-green-300 transition-colors text-sm"
             >
               View Case Study →
             </a>
@@ -342,7 +341,7 @@ const App: React.FC = () => {
           {/* Card 3: Liberty */}
           <SpotlightCard>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+              <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
@@ -361,24 +360,24 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 PyTorch
               </span>
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 Edge Deploy
               </span>
             </div>
 
             <a
               href="/projects/vision"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+              className="text-green-400 hover:text-green-300 transition-colors text-sm"
             >
               View Case Study →
             </a>
           </SpotlightCard>
           <SpotlightCard>
             <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+              <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
                 <img src={ai_icon} alt="AI" className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
@@ -397,17 +396,17 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 PyTorch
               </span>
-              <span className="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 text-sm">
+              <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
                 Edge Deploy
               </span>
             </div>
 
             <a
               href="/projects/vision"
-              className="text-indigo-400 hover:text-indigo-300 transition-colors text-sm"
+              className="text-green-400 hover:text-green-300 transition-colors text-sm"
             >
               View Case Study →
             </a>
