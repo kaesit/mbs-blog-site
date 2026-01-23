@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <footer className="footer-container">
         <div className="footer-content">
           {/* Sol kısım */}
-          <div className="footer-section">
+          <div className="footer-section" id="footer-brand-section">
             <h4 className="footer-title">MBS Liberty Tech</h4>
             <p className="footer-text">
               Building innovative solutions with freedom, order, and creativity.
@@ -34,15 +34,17 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4 className="footer-title">Connect</h4>
             <div className="footer-socials">
-              <a href="https://github.com/kaesit" aria-label="GitHub">
-                GitHub
-              </a>
-              <a href="https://linkedin.com" aria-label="LinkedIn">
-                LinkedIn
-              </a>
-              <a href="https://instagram.com" aria-label="Instagram">
-                Instagram
-              </a>
+              <ul className="footer-links">
+                <li>
+                  <a href="https://github.com/kaesit">Github</a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com">LinkedIn</a>
+                </li>
+                <li>
+                  <a href="https://instagram.com">Instagram</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
