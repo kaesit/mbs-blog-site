@@ -70,9 +70,9 @@ export default function Faq() {
     <section
       className="min-h-screen flex items-center justify-center px-4"
     >
-      <div className="w-full max-w-3xl">
-        <h2 className="text-center text-4xl font-semibold mb-12
-                       bg-gradient-to-r from-indigo-400 to-cyan-400
+      <div className="w-full max-w-6xl">
+        <h2 className="text-center text-4xl font-semibold mb-8
+                       bg-gradient-to-r from-green-400 to-cyan-400
                        bg-clip-text text-transparent">
           Sık Sorulan Sorular
         </h2>
@@ -93,7 +93,7 @@ export default function Faq() {
                 </span>
 
                 <span
-                  className={`text-indigo-400 text-2xl transition-transform duration-300 ${
+                  className={`text-green-400 text-2xl transition-transform duration-300 ${
                     activeIndex === index ? "rotate-45" : ""
                   }`}
                 >

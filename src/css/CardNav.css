@@ -124,7 +124,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 120px;
+  top: 90px;
   bottom: 0;
   padding: 0.5rem;
   display: flex;
@@ -152,13 +152,13 @@
   display: flex;
   flex-direction: column;
   padding: 12px 16px;
-  gap: 8px;
+  gap: 4px;
   user-select: none;
 }
 
 .nav-card-label {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   font-family: Lekton;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -176,7 +176,7 @@
 }
 
 .nav-card-link {
-  font-size: 16px;
+  font-size: 12px;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
