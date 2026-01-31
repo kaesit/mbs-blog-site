@@ -59,7 +59,7 @@
   font-size: clamp(4rem, 8vw, 9rem); /* Massive responsive font */
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 3rem;
   margin: 0;
   background: linear-gradient(to bottom, #fff, #a5b4fc);
   -webkit-background-clip: text;
@@ -79,7 +79,7 @@
   font-size: clamp(4rem, 8vw, 9rem);
   font-weight: 800;
   line-height: 1; /* Match container height */
-  letter-spacing: 0.06em;
+  letter-spacing: 4rem;
   color: #3b82f6; /* Accent color */
   white-space: nowrap;
   margin: 0;
