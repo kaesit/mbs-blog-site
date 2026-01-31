@@ -236,7 +236,7 @@ const App: React.FC = () => {
         "-=0.6"
       )
       .from(
-        ".spotlight-card",
+        ".spotlight-main-card",
         { y: 100, opacity: 0, stagger: 0.2, duration: 1, ease: "power2.out" },
         "-=0.4"
       );
@@ -248,7 +248,7 @@ const App: React.FC = () => {
 
       <div className="hero-container">
         <div className="hero-title-wrapper">
-          <h1 className="static-title">MBS IS</h1>
+          <h1 className="static-title titleOfMainPage">MBS IS</h1>
           <RotatingText words={["FUTURE", "REALITY", "GROWTH", "SPEED"]} />
         </div>
 

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +9,7 @@ body {
   margin: 0;
   background: linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: var(--text-main);
-  font-family: "VVDS Fifties Sexp Bold", sans-serif; /* Clean Sans-Serif */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -23,15 +24,23 @@ pre {
 }
 
 /* Hero */
+
 .titleOfMainPage {
   color: #e0f0ff;
-  font-family: "VVDS Fifties Exp SBold", sans-serif;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25);
-  font-weight: 800;
   font-size: 4.5rem;
   margin-bottom: 1.5rem;
   padding: 0.3rem 0.6rem;
   border-radius: 1.75rem;
+}
+.rotating-word {
+  color: #49afee;
+  text-shadow: 0 0 12px rgba(73, 175, 238, 0.4);
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
 }
 
 .hero-container {
@@ -44,34 +53,6 @@ pre {
   gap: 0.6rem;
   padding: 2rem 1rem;
   flex-wrap: wrap;
-}
-
-.join-us-button,
-.learn-more-button {
-  width: 125px;
-  height: 40px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 200;
-  color: white;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  font-size: 15px;
-  transition: 0.8s ease;
-}
-
-.join-us-button:hover {
-  cursor: pointer;
-  background-color: #49afee9c;
-  box-shadow: 0 8px 15px rgba(37, 128, 255, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.8s ease;
-}
-
-.learn-more-button:hover {
-  cursor: pointer;
-  background-color: #f22a699c;
-  box-shadow: 0 8px 15px rgba(255, 79, 135, 0.3);
-  transition: background-color 0.3s ease, box-shadow 0.8s ease;
 }
 /* Background */
 .background-gradient {

@@ -1,5 +1,5 @@
-/* App.css */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +12,6 @@
   --card-bg: rgba(29, 29, 29, 0.871);
   --card-border: rgba(255, 255, 255, 0.08);
 }
-
 
 
 /* --- GSAP AURORA BACKGROUND (Smoother) --- */
@@ -113,6 +112,10 @@
 .cta-button {
   padding: 16px 48px;
   border-radius: 100px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
