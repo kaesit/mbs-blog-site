@@ -17,7 +17,7 @@ const ContributingPage: React.FC = () => {
 
     return (
         
-        <div className="bg-neutral-900 min-h-screen text-gray-200 font-sans">
+        <div className="bg-[#070F2B] min-h-screen text-gray-200 font-sans">
             <style>
 @import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Genos:ital,wght@0,300;1,300&display=swap');
             </style>
