@@ -14,7 +14,12 @@ const items = [
       {
         label: "Me",
         href: "/about",
-        ariaLabel: "About Careers",
+        ariaLabel: "About Me",
+      },
+      {
+        label: "Contributing",
+        href: "/contributing",
+        ariaLabel: "About Contributing",
       },
     ],
   },

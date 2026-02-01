@@ -98,7 +98,6 @@ const CardNav: React.FC<CardNavProps> = ({
     return 260;
   }, []);
 
-  // ✅ Düzeltilmiş timeline oluşturma
   const createTimeline = useCallback(() => {
     const navEl = navRef.current;
     if (!navEl) return null;
@@ -127,7 +126,6 @@ const CardNav: React.FC<CardNavProps> = ({
     return tl;
   }, [calculateHeight, ease]);
 
-  // ✅ Dependency array düzeltildi
   useLayoutEffect(() => {
     const tl = createTimeline();
     tlRef.current = tl;
@@ -138,30 +136,21 @@ const CardNav: React.FC<CardNavProps> = ({
     };
   }, [createTimeline, items]);
 
-  // ✅ Resize handler düzeltildi
   useLayoutEffect(() => {
     const handleResize = () => {
       if (!tlRef.current) return;
-
-      // Debounce resize events
       const resizeTimeout = setTimeout(() => {
         if (isExpanded && tlRef.current) {
           const newHeight = calculateHeight();
-
-          // Mevcut timeline'ı durdur
           tlRef.current.kill();
-
-          // Yeni height'ı direkt set et
           gsap.set(navRef.current, { height: newHeight, overflow: "visible" });
 
-          // Yeni timeline oluştur ve tamamlanmış state'e getir
           const newTl = createTimeline();
           if (newTl) {
             newTl.progress(1);
             tlRef.current = newTl;
           }
         } else {
-          // Kapalı durumda yeni timeline oluştur
           tlRef.current?.kill();
 
           const newTl = createTimeline();
@@ -180,7 +169,6 @@ const CardNav: React.FC<CardNavProps> = ({
     };
   }, [isExpanded, calculateHeight, createTimeline]);
 
-  // ✅ Toggle menu fonksiyonu düzeltildi
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
@@ -201,7 +189,6 @@ const CardNav: React.FC<CardNavProps> = ({
 
       tl.eventCallback("onReverseComplete", () => {
         setIsExpanded(false);
-        // Reverse tamamlandığında overflow'u hidden yap
         if (navRef.current) {
           gsap.set(navRef.current, { overflow: "hidden" });
         }
