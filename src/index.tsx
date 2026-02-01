@@ -19,6 +19,7 @@ import ProfilePage from "./pages/ProfilePage";
 // --- Import the new components ---
 import MainLayout from "./layouts/MainLayout"; // (Or wherever you saved it)
 import NotFoundPage from "./pages/NotFoundPage";
+import ContributingPage from "./pages/Contributing";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -42,6 +43,7 @@ root.render(
           <Route path="/blogcontentpage" element={<BlogContentPage />} />
           <Route path="/casestudies" element={<CaseStudies />} />
           <Route path="/profilepage" element={<ProfilePage />} />
+          <Route path="/contributing" element={<ContributingPage />} />
         </Route>
 
         {/* 2. Routes WITHOUT the Navbar */}

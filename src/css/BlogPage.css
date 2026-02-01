@@ -24,10 +24,10 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  left: 0.7rem;
+  left: 5rem;
   grid-template-columns: 1fr; /* mobilde tek sütun */
   width: 100%;
-  gap: 2rem;
+  gap: 4rem;
   max-width: 95vw;
   scroll-behavior: smooth;
 }
@@ -142,11 +142,6 @@
   font-weight: 100;
 }
 
-.footer-wrapper {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
 
 /* 768px ve üstü ekranlarda iki sütun */
 @media (min-width: 768px) {
