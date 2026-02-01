@@ -9,19 +9,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/, // TypeScript rule
+        test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      // Sadece bu kuralı kullan, diğer .md kuralını sil:
       {
-        test: /\.md$/, // Rule for .md files
-        use: 'raw-loader', // Use raw-loader to import markdown as text
+        test: /\.md$/,
+        type: 'asset/source', // Bu ayar içeriği 'string' olarak verir
       },
       {
-        test: /\.css$/, // CSS rule (example)
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // Add other rules for your project as needed
     ],
   },
   resolve: {
