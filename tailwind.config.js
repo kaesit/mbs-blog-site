@@ -4,10 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // 'sans'ı varsayılan olarak Rajdhani yapıyoruz
         sans: ['Rajdhani', 'sans-serif'], 
-        // Başlıklar için özel 'techno' fontu tanımlıyoruz
-        techno: ['Orbitron', 'sans-serif'],
+        techno: ['Genos', 'sans-serif'],
       },
     },
   },

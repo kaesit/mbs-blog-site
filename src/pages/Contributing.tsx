@@ -16,16 +16,22 @@ const ContributingPage: React.FC = () => {
     }, []);
 
     return (
+        
         <div className="bg-neutral-900 min-h-screen text-gray-200 font-sans">
+            <style>
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Genos:ital,wght@0,300;1,300&display=swap');
+            </style>
             <main className="pt-20 container mx-auto p-7">
-                <h1 className="text-4xl md:text-5xl font-techno font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-8 mt-4 uppercase tracking-wider">
-                    Katkıda Bulunma Rehberi
+                <h1 className="text-4xl md:text-5xl font-[Asimovian] font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-8 mt-4 uppercase tracking-wider">
+                    Guideline to Contribute
                 </h1>
-                <article className="prose prose-invert prose-lg max-w-none prose-headings:font-techno prose-headings:uppercase prose-a:text-cyan-400">
-                    <ReactMarkdown>
-                        {markdownContent}
-                    </ReactMarkdown>
-                </article>
+                <div className="border-4 border-solid border-cyan-900 border-l-cyan-500 p-20 rounded-xl">
+                    <article className="prose prose-invert prose-lg max-w-none prose-headings:font-[Genos] prose-text:font-[Genos] prose-headings:uppercase prose-a:text-cyan-400">
+                        <ReactMarkdown>
+                            {markdownContent}
+                        </ReactMarkdown>
+                    </article>
+                </div>
             </main>
         </div>
     );
