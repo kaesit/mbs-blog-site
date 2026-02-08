@@ -32,9 +32,6 @@ const ContributingPage: React.FC = () => {
                         </ReactMarkdown>
                     </article>
                 </div>
-                <button className="min-w-48 mt-6 h-12 bg-sky-500 border-solid border-sky-500 border-2 rounded-xl  transition duration-700 ease-in-out hover:bg-neutral-900">
-                    Download File
-                </button>
             </main>
         </div>
     );
