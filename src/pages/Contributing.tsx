@@ -25,7 +25,7 @@ const ContributingPage: React.FC = () => {
                 <h1 className="text-4xl md:text-5xl font-[Lato] font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-8 mt-4 uppercase tracking-wider">
                     Guideline to Contribute
                 </h1>
-                <div className="border-4 border-solid border-cyan-900 border-l-cyan-500 p-20 p-b-10 rounded-xl">
+                <div className="border-2 border-l-4 border-solid border-cyan-900 border-l-cyan-500 p-20 p-b-10 rounded-3xl">
                     <article className="prose prose-invert prose-lg max-w-none prose-headings:font-[Lato] prose-text:font-[Lato] prose-headings:uppercase prose-a:text-cyan-400">
                         <ReactMarkdown>
                             {markdownContent}
