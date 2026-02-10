@@ -136,10 +136,8 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="blog-page">
-      <header className="blog-header">
-        <h1 className="blog-title">Newest Blogs</h1>
-      </header>
 
+      <h1 className="blog-title">Newest Blogs</h1>
       <div className="blog-list">
         {loading
           ? [1, 2, 3].map((s) => (
