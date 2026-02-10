@@ -35,7 +35,7 @@ const items = [
       },
       {
         label: "Case Studies",
-        href: "https://github.com/kaesit",
+        href: "/casestudies",
         ariaLabel: "Project Case Studies",
       },
     ],
@@ -79,12 +79,12 @@ const items = [
       },
       {
         label: "Movie & Show Critics",
-        href: "https://github.com/kaesit",
+        href: "movieshowcritics",
         ariaLabel: "Movies & Shows",
       },
       {
         label: "Technology Blogs",
-        href: "https://github.com/kaesit",
+        href: "/technologyblogs",
         ariaLabel: "Technology",
       },
     ],
