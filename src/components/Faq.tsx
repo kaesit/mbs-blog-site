@@ -30,8 +30,10 @@ export default function Faq() {
 
   const toggleFaq = (index: number) => {
     const content = contentRefs.current[index];
-
     if (!content) return;
+
+    // Aynı elementteki eski animasyonları durdur
+    gsap.killTweensOf(content);
 
     if (activeIndex === index) {
       gsap.to(content, {
@@ -45,6 +47,7 @@ export default function Faq() {
       if (activeIndex !== null) {
         const prev = contentRefs.current[activeIndex];
         if (prev) {
+          gsap.killTweensOf(prev);
           gsap.to(prev, {
             height: 0,
             opacity: 0,
@@ -54,26 +57,29 @@ export default function Faq() {
         }
       }
 
-      gsap.set(content, { height: "auto" });
-      gsap.from(content, {
-        height: 0,
-        opacity: 0,
-        duration: 0.4,
-        ease: "power2.out",
-      });
+      gsap.fromTo(
+        content,
+        { height: 0, opacity: 0 },
+        {
+          height: "auto",
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+        },
+      );
 
       setActiveIndex(index);
     }
   };
 
   return (
-    <section
-      className="min-h-screen flex items-center justify-center px-4"
-    >
+    <section className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-6xl">
-        <h2 className="text-center text-4xl font-semibold mb-8
+        <h2
+          className="text-center text-4xl font-semibold mb-8
                        bg-gradient-to-r from-green-400 to-cyan-400
-                       bg-clip-text text-transparent">
+                       bg-clip-text text-transparent"
+        >
           Sık Sorulan Sorular
         </h2>
 
@@ -107,7 +113,7 @@ export default function Faq() {
                 }}
                 className="h-0 overflow-hidden"
               >
-                <p className="px-6 pb-5 text-gray-400 leading-relaxed">
+                <p className="px-6 pb-5 text-gray-300 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
