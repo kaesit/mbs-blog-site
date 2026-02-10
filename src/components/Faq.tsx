@@ -8,19 +8,19 @@ type FaqItem = {
 
 const faqs: FaqItem[] = [
   {
-    question: "Bu platform ne işe yarıyor?",
+    question: "What is the purpose of this platform?",
     answer:
-      "Bu platform projelerinizi modern teknolojilerle hızlı ve sürdürülebilir şekilde geliştirmenizi sağlar.",
+      "This plotform is mine(Esad Abdullah KOSEDAG) personal and community website for developers around everywhere.",
   },
   {
-    question: "Dark tema varsayılan mı?",
+    question: "How to contribure?",
     answer:
-      "Evet. Arayüz, uzun süreli kullanımlarda göz yormaması için özel olarak tasarlanmıştır.",
+      "You can check CONTIRBUTE.md file on website.",
   },
   {
-    question: "Tailwind ve GSAP birlikte mi kullanılıyor?",
+    question: "Can i share my projects?",
     answer:
-      "Evet. Stiller Tailwind ile, animasyonlar ise GSAP ile yönetilmektedir.",
+      "Yes you can share your projects. You can share articles, researches, videos and cases via website by following the rules in CONTRIBUTE.md file.",
   },
 ];
 
