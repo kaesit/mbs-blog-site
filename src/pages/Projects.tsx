@@ -88,10 +88,7 @@ const Projects: React.FC = () => {
         </SpotlightCard>
       </div>
       {/* Footer */}
-      <div style={{ position: "relative", zIndex: 1, paddingBottom: "0rem" }}>
-        {/* Navbar, RotatingText, SpotlightCards vs */}
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

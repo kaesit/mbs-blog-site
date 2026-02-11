@@ -248,14 +248,13 @@ const App: React.FC = () => {
     <>
       {/*<AuroraBackground />*/}
 
-      <div className="hero-container">
+      <div className="relative hero-container">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Genos:ital,wght@0,300;1,300&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
-        <div className="hero-title-wrapper">
-          
+        <div className="relative hero-title-wrapper">
           <h1 className="mb-4 text-8 mr-[4rem] font-bold font-zen-dots tracking-tight text-heading md:text-5xl lg:text-[18rem] titleOfMainPage">MBS</h1>
           <RotatingText words={["FUTURE", "REALITY", "GROWTH", "SPEED"]} />
         </div>

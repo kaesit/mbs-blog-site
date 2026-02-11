@@ -5,17 +5,15 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: #d7dedf;
-  padding: 1rem;
   overflow: hidden;
-  height: 65vh;
+  height: 75vh;
 
 }
 /* footer gri renk #373737*/
 
 .footer-container::before {
   content: "";
-  position: absolute;
-  top: 0;
+  top: 20rem;
   left: 0;
   right: 0;
   bottom: 0;

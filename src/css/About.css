@@ -1,10 +1,9 @@
 /* Genel sayfa ayarları */
 .about-page {
-  background: linear-gradient(90deg, #0040ff10 0%, #000000 50%, #0d0f11 100%);
+  background: linear-gradient(180deg, #18191c 0%, #040507 50%, #161a20 100%);
   color: #d7dedf;
   align-items: center;
   display: grid;
-  font-family: "VVDS Fifties Exp SBold";
 }
 
 /* Başlık */
@@ -13,16 +12,6 @@
   text-align: center;
   top: 13vh;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25); /* Spotlight ile uyumlu daha belirgin bir ışık */
-}
-
-h3 {
-  font-family: "VVDS Fifties Exp SBold";
-}
-
-pre{
-  /*font-family: sourcecodepro, Menlo, Monaco, Consolas, "Courier New", monospace;*/
-  font-family: "Poiret One", sans-serif;
-  font-weight: 900;
 }
 
 .about-title {
