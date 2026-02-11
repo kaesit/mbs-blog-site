@@ -15,7 +15,7 @@ const faqs: FaqItem[] = [
   {
     question: "How to contribure?",
     answer:
-      "You can check CONTIRBUTE.md file on website.",
+      "You can check CONTRIBUTE.md file on website.",
   },
   {
     question: "Can i share my projects?",
