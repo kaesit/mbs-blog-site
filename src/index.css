@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,8 +26,7 @@ pre {
 /* Hero */
 
 .titleOfMainPage {
-  color: #e0f0ff;
-  font-family: "Black Ops One", system-ui;
+  color: #107ee5;
   font-weight: 400;
   font-style: normal;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25);
@@ -37,8 +36,7 @@ pre {
 }
 .rotating-word {
   color: #49afee;
-  text-shadow: 0 0 12px rgba(73, 175, 238, 0.4);
-  font-family: "Black Ops One", system-ui;
+  font-family: "Zen Dots", sans-serif;
   font-weight: 400;
 }
 

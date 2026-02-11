@@ -6,6 +6,8 @@ module.exports = {
       fontFamily: {
         sans: ['Rajdhani', 'sans-serif'], 
         techno: ['Genos', 'sans-serif'],
+        'zen-dots': ['Zen Dots', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       },
     },
   },

@@ -112,7 +112,6 @@
 .cta-button {
   padding: 16px 48px;
   border-radius: 100px;
-  font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
@@ -124,14 +123,15 @@
 }
 
 .cta-button.primary {
-  background: #1fe973;
-  color: #000000;
+  background: transparent;
+  color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
 }
 .cta-button.primary:hover {
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid #1fe973;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
-
 }
 
 .cta-button.secondary {
@@ -143,7 +143,7 @@
 }
 .cta-button.secondary:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-bottom: 4px solid #1fe973;
+  border-bottom: 2px solid #1fe973;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
 }
 
