@@ -26,7 +26,12 @@ pre {
 /* Hero */
 
 .titleOfMainPage {
-  color: #107ee5;
+  background: url(img/411786755_1e7df7e9-e7b3-4244-b045-97d7cdad3be4.jpg)no-repeat top center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	cursor: pointer;
   font-weight: 400;
   font-style: normal;
   text-shadow: 0 0 15px rgba(175, 210, 255, 0.25);

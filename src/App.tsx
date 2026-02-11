@@ -9,6 +9,7 @@ import FAQComponent from "./components/Faq";
 import ai_icon from "./icons/ai_icon.svg";
 import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
 
@@ -216,6 +217,7 @@ const SpotlightCard = ({
 
 /* --- MAIN COMPONENT --- */
 const App: React.FC = () => {
+  let navigate = useNavigate();
   useGSAP(() => {
     const tl = gsap.timeline();
     // Intro Animation
@@ -254,13 +256,17 @@ const App: React.FC = () => {
         </style>
         <div className="hero-title-wrapper">
           
-          <h1 className="mb-4 text-8 mr-[6rem] font-bold font-zen-dots tracking-tight text-heading md:text-5xl lg:text-[18rem]">MBS</h1>
+          <h1 className="mb-4 text-8 mr-[4rem] font-bold font-zen-dots tracking-tight text-heading md:text-5xl lg:text-[18rem] titleOfMainPage">MBS</h1>
           <RotatingText words={["FUTURE", "REALITY", "GROWTH", "SPEED"]} />
         </div>
 
         <div className="hero-buttons">
-          <button className="font-roboto cta-button primary">Join the Team</button>
-          <button className="cta-button secondary">View Work</button>
+          <button className="font-roboto cta-button primary" onClick={
+            () => navigate("/signin")
+          }>Join the Team</button>
+          <button className="cta-button secondary" onClick={
+            () => navigate("/projects")
+          }>View Work</button>
         </div>
       </div>
 

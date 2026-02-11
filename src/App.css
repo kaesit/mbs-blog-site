@@ -106,16 +106,18 @@
 .hero-buttons {
   margin-top: 4rem;
   display: flex;
+  height: 12vh;
   gap: 24px;
 }
 
 .cta-button {
-  padding: 16px 48px;
+  width: 10vw;
+  height: 6vh;
   border-radius: 100px;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-bottom 0.2s ease;
