@@ -13,7 +13,7 @@ const faqs: FaqItem[] = [
       "This plotform is mine(Esad Abdullah KOSEDAG) personal and community website for developers around everywhere.",
   },
   {
-    question: "How to contribure?",
+    question: "How to contribute?",
     answer:
       "You can check CONTRIBUTE.md file on website.",
   },
