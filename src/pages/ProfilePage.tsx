@@ -25,9 +25,9 @@ import image4 from "../img/image4.jpeg";
 import image5 from "../img/image5.png";
 import image6 from "../img/image6.jpg";
 import image7 from "../img/image7.jpg";
-import image8 from "../img/image8.jpg";
-import image9 from "../img/image9.jpg";
-import image10 from "../img/image10.png";
+import image8 from "../img/ascii-art (2).png";
+import image9 from "../img/ascii-art.png";
+import image10 from "../img/ascii-art (1) (1).png";
 
 // --- MOCK DATA & ASSETS ---
 const AVATAR_IMG =
@@ -58,6 +58,9 @@ const BLOG_IMAGES2 = [
   "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVpfGVufDB8fDB8fHww",
   "https://i.ytimg.com/vi/gox0q--CoUs/maxresdefault.jpg",
   "https://plus.unsplash.com/premium_photo-1765020473739-aa7206a1fc16?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b3BlbkNWfGVufDB8fDB8fHww",
+  image8,
+  image9,
+  image10
 ];
 
 
@@ -286,6 +289,24 @@ const ProfilePage: React.FC = () => {
     },
     {
       id: 10,
+      title: "Python for DeepLearning and OpenCV",
+      date: "20.10.2025",
+      tags: ["Python", "OpenCV"],
+    },
+    {
+      id: 11,
+      title: "Future Unions of World",
+      date: "20.10.2025",
+      tags: ["World", "Politics"],
+    },
+    {
+      id: 12,
+      title: "Aesthetics in Tech",
+      date: "20.10.2025",
+      tags: ["Design", "Art"],
+    },
+    {
+      id: 13,
       title: "Python for DeepLearning and OpenCV",
       date: "20.10.2025",
       tags: ["Python", "OpenCV"],
