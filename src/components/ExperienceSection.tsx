@@ -41,10 +41,19 @@ const experienceData: Job[] = [
     id: 4,
     dateRange: "Jan 2025 - Jun 2025",
     title: "Software Engineer and Scrum Master",
-    company: "BB Bilişim Teknolojileri",
+    company: "University Project",
     description:
       "Developed a AI driven travel guide, booking and managament application for our University project to accomplish our first year graduation project. Also managed the team as Scrum Master.",
     tags: ["NodeJS", "Python", "Google Cloud", "LLM APIs", "Scrum"],
+  },
+  {
+    id: 5,
+    dateRange: "Nov 2025 - Present",
+    title: "AI Engineer and Bioinformatics Researcher",
+    company: "University and National Project",
+    description:
+      "Developed a AI driven bioinformatics platform, that is analying cancer types for patients and trying to discover personal drugs, also used kinase inhibitors to train and LSTM model and generate candidate compunds for leukima",
+    tags: ["NodeJS", "Python", "C#", "Researcher", "Bioinformatics", "AI", "Drug Discovery", "LSTM"],
   },
 ];
 
@@ -56,11 +65,11 @@ const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
       <span
         key={t}
         style={{
-          fontFamily:"Poiret One, sans-serif",
+          fontFamily:"Cascadia Code, sans-serif",
           fontWeight: 500,
           fontSize: "0.75rem",
           background: "linear-gradient(90deg, rgba(58, 134, 255, 0.08),rgba(46, 196, 182, 0.06))",
-          color: "#ffffffd2",
+          color: "#819dc7",
           padding: "2px 6px",
           borderRadius: "4px",
         }}
@@ -74,13 +83,13 @@ const ProjectTags: React.FC<{ tags: string[] }> = ({ tags }) => (
 const ExperienceSection: React.FC = () => {
   return (
     <div className="experience-section">
-      <h2 className="experience-header">// Professional Experience</h2>
+      <h2 className="experience-header">Professional Experience</h2>
       <ul className="timeline">
         {experienceData.map((job) => (
           <li key={job.id} className="timeline-item">
             <p className="timeline-date">{job.dateRange}</p>
             <h3 className="timeline-title">{job.title}</h3>
-            <p className="timeline-company">@ {job.company}</p>
+            <p className="timeline-company">Affiliation: {job.company}</p>
             <p className="timeline-description">{job.description}</p>
             <ProjectTags tags={job.tags} />
           </li>

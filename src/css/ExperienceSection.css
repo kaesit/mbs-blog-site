@@ -31,6 +31,7 @@
   margin: 0;
   padding-left: 40px; /* Space for the line */
   list-style: none;
+  
 }
 
 /* Vertical dividing line */
@@ -64,41 +65,41 @@
 }
 
 .timeline-date {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   font-size: 0.9em;
-  color: var(--primary-color);
+  color: rgb(167, 167, 167);
   margin-bottom: 5px;
   font-weight: 600;
 }
 
 .timeline-title {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   font-size: 1.2em;
   color: var(--text-color);
   margin-top: 0;
   margin-bottom: 5px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .timeline-company {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   font-size: 1em;
-  color: var(--secondary-text-color);
+  color: rgb(206, 206, 206);
   margin-bottom: 10px;
-  font-style: italic;
+  font-weight: 1000;
 }
 
 .timeline-description {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   font-size: 1em;
-  color: var(--secondary-text-color);
+  color: rgb(167, 167, 167);
   line-height: 1.5;
 }
 
 /* --- Spotlight Card Styles --- */
 
 .spotlight-card {
-  font-family: "Poiret One", sans-serif;
+  font-family: "Cascadia Code", sans-serif;
   background-color: var(--background-open);
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -135,5 +136,6 @@
 .card-excerpt {
   font-size: 0.95em;
   color: var(--secondary-text-color);
+  font-weight: 200;
   line-height: 1.5;
 }

@@ -20,7 +20,7 @@
   margin-top: 40px;
 }
 
-.about-spotlight-card:nth-child(-n + 3) {
+.about-spotlight-card {
   justify-content: center;
   grid-column: 1 / -1;
   display: flex !important;
@@ -38,7 +38,7 @@
     rgba(46, 196, 182, 0.06)
   );
   box-shadow: 0 16px 50px rgba(2, 6, 23, 0.62), 0 6px 20px rgba(3, 8, 20, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
