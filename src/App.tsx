@@ -9,6 +9,7 @@ import FAQComponent from "./components/Faq";
 import ai_icon from "./icons/ai_icon.svg";
 import innovation_icon from "./icons/technology_icon.svg";
 import liberty_icon from "./icons/liberty_icon.svg";
+import originality_icon from "./icons/fingerprint_icon.png";
 import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
@@ -288,7 +289,7 @@ const App: React.FC = () => {
             </p>
 
             <div className="rounded-xl bg-white/5 p-4">
-              <strong className="text-white block">98% Accuracy</strong>
+              <strong className="text-white block">98% Success</strong>
               <span className="text-sm text-gray-400">
                 Retail shelf-monitoring production
               </span>
@@ -315,29 +316,28 @@ const App: React.FC = () => {
           <SpotlightCard>
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                <img src={ai_icon} alt="AI" className="h-6 w-6" />
+                <img src={innovation_icon} alt="Innovation" className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+              <h3 className="text-xl font-semibold text-white">Embedded System Solutions</h3>
             </div>
 
             <p className="text-gray-400 leading-relaxed">
-              Production-ready computer vision pipelines and robust model
-              deployment for embedded & cloud platforms.
+              Assist for the young and competitive people and startups to build their embedded systems
             </p>
 
             <div className="rounded-xl bg-white/5 p-4">
-              <strong className="text-white block">98% Accuracy</strong>
+              <strong className="text-white block">87% Success</strong>
               <span className="text-sm text-gray-400">
-                Retail shelf-monitoring production
+                Robotic investment and proccess monitoring
               </span>
             </div>
 
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                PyTorch
+                Embedded Systems
               </span>
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                Edge Deploy
+                Robotics
               </span>
             </div>
 
@@ -353,29 +353,29 @@ const App: React.FC = () => {
           <SpotlightCard>
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                <img src={ai_icon} alt="AI" className="h-6 w-6" />
+                <img src={liberty_icon} alt="liberty" className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+              <h3 className="text-xl font-semibold text-white">Open Source Legacy</h3>
             </div>
 
             <p className="text-gray-400 leading-relaxed">
-              Production-ready computer vision pipelines and robust model
-              deployment for embedded & cloud platforms.
+              Endless support for open source projects and contributers, who are still on 
+              stage to project privacy and making the world a better place
             </p>
 
             <div className="rounded-xl bg-white/5 p-4">
-              <strong className="text-white block">98% Accuracy</strong>
+              <strong className="text-white block">100% Support</strong>
               <span className="text-sm text-gray-400">
-                Retail shelf-monitoring production
+                Open source project support and contribution
               </span>
             </div>
 
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                PyTorch
+                OpenSource
               </span>
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                Edge Deploy
+                Investment
               </span>
             </div>
 
@@ -389,29 +389,29 @@ const App: React.FC = () => {
           <SpotlightCard>
             <div className="flex items-center gap-4">
               <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                <img src={ai_icon} alt="AI" className="h-6 w-6" />
+                <img src={originality_icon} alt="originality" className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold text-white">AI Solutions</h3>
+              <h3 className="text-xl font-semibold text-white">Originality</h3>
             </div>
 
             <p className="text-gray-400 leading-relaxed">
-              Production-ready computer vision pipelines and robust model
-              deployment for embedded & cloud platforms.
+              We are confident about our works. and we don't claim our works are best on the planet
+              but we're always trying to outdone ourselves to be unique
             </p>
 
             <div className="rounded-xl bg-white/5 p-4">
-              <strong className="text-white block">98% Accuracy</strong>
+              <strong className="text-white block">100% Confidence</strong>
               <span className="text-sm text-gray-400">
-                Retail shelf-monitoring production
+                Push the boundaries of your potential
               </span>
             </div>
 
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                PyTorch
+                Originality
               </span>
               <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-300 text-sm">
-                Edge Deploy
+                Confidence
               </span>
             </div>
 
