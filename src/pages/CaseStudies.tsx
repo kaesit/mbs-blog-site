@@ -71,7 +71,7 @@ const CaseStudies: React.FC = () => {
           img: image4,
           title: "Audio processing in Python",
           excerpt:
-            "AI powered game engine tools and new game production methods are really changing the game development but at same time stories are evolving backwards.",
+            "AI powered game engine tools and new game production methods.",
           author: "Esad A. Kösedağ",
           author_image: image4,
           date: "10 Eylül 2025",
@@ -94,7 +94,7 @@ const CaseStudies: React.FC = () => {
   return (
     <div className="case-blog-page">
       <header className="case-blog-header">
-        <h1 className="case-blog-title">Case Studies 0 </h1>
+        <h1 className="case-blog-title">Case Studies</h1>
       </header>
 
       <div className="case-studies-main-container">
@@ -167,8 +167,10 @@ const CaseStudies: React.FC = () => {
                           marginLeft: "0.6rem",
                         }}
                       >
-                        <h2 className="case-blog-post-title">{post.title}</h2>
-                        <p className="case-blog-excerpt">{post.excerpt}</p>
+                        <div className="case-blog-text">
+                          <h2 className="case-blog-post-title">{post.title}</h2>
+                          <p className="case-blog-excerpt">{post.excerpt}</p>
+                        </div>
                       </div>
                       <div className="case-blog-meta">
                         <BlogAvatar alt="Author" src={post.author_image} />
