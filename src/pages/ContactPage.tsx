@@ -7,6 +7,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import Footer from "../components/Footer";
 
 // ---- Dark TextField ----
 const DarkTextField = styled(TextField)(({ theme }) => ({
@@ -146,14 +147,7 @@ const ContactPage: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div style={{ position: "relative", zIndex: 1, paddingBottom: "5rem" }}>
-        <div className="footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Esad Abdullah Kösedağ. All rights
-            reserved.
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };
