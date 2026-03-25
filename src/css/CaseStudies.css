@@ -96,10 +96,16 @@
   border-radius: 8px;
   border: none;
   padding: 0 0.5rem;
-  background-color: rgba(34, 74, 92, 0.676);
+  background-color: rgba(23, 27, 29, 0.676);
   color: #d7dedf;
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+.text-input:active, .text-input:focus {
+  outline: none;
+  border: 1px solid #58f0b5;
+  box-shadow: 0 0 5px rgba(88, 240, 181, 0.8);
 }
 .case-blog-list {
   position: relative;
